@@ -1,4 +1,5 @@
 import { Client } from "@notionhq/client";
+import React from "react";
 // import { NotionToMarkdown } from "notion-to-md";
 
 const notion = new Client({ auth: process.env.NOTION_ACCESS_TOKEN });
@@ -31,7 +32,7 @@ const pageToPostTransformer = (page) => {
   };
 };
 
-const getConferences = async () => {
+const getConferences = React.cache(async () => {
   const database = process.env.NOTION_BLOG_DATABASE_ID ?? "";
   const response = await notion.databases.query({
     database_id: database,
@@ -46,47 +47,34 @@ const getConferences = async () => {
   return response.results.map((res) => {
     return pageToPostTransformer(res);
   });
-};
+});
 
-// const getConference = async (slug) => {
-//   let post, markdown;
-//
-//   const database = process.env.NOTION_BLOG_DATABASE_ID ?? "";
-//   // list of blog posts
-//   const response = await this.client.databases.query({
-//     database_id: database,
-//     filter: {
-//       property: "Slug",
-//       formula: {
-//         text: {
-//           equals: slug, // slug
-//         },
-//       },
-//       // add option for tags in the future
-//     },
-//     sorts: [
-//       {
-//         property: "Updated",
-//         direction: "descending",
-//       },
-//     ],
-//   });
-//
-//   if (!response.results[0]) {
-//     throw "No results available";
-//   }
-//
-//   // grab page from notion
-//   const page = response.results[0];
-//
-//   const mdBlocks = await n2m.pageToMarkdown(page.id);
-//   markdown = n2m.toMarkdownString(mdBlocks);
-//   post = pageToPostTransformer(page);
-//
-//   return {
-//     post,
-//     markdown,
-//   };
-// };
+const getConference = React.cache(async (slug) => {
+  const database = process.env.NOTION_BLOG_DATABASE_ID ?? "";
+  const response = await notion.databases.query({
+    database_id: database,
+    filter: {
+      property: "Slug",
+      formula: {
+        string: {
+          equals: slug, // slug
+        },
+      },
+      // add option for tags in the future
+    },
+  });
 
-export default { /* getConference, */ getConferences };
+  if (!response.results[0]) {
+    throw "No results available";
+  }
+
+  return pageToPostTransformer(response.results[0]);
+});
+
+const getConferenceBlocks = React.cache(async (pageId) => {
+  const response = await notion.blocks.children
+    .list({ block_id: pageId });
+  return response.results;
+});
+
+export default { getConference, getConferences, getConferenceBlocks, notion };
