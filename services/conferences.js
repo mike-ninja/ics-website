@@ -1,8 +1,8 @@
 import { Client } from "@notionhq/client";
-import { NotionToMarkdown } from "notion-to-md";
+// import { NotionToMarkdown } from "notion-to-md";
 
 const notion = new Client({ auth: process.env.NOTION_ACCESS_TOKEN });
-const n2m = new NotionToMarkdown({ notionClient: notion });
+// const n2m = new NotionToMarkdown({ notionClient: notion });
 
 const pageToPostTransformer = (page) => {
   let cover = page.cover;
@@ -18,20 +18,22 @@ const pageToPostTransformer = (page) => {
       cover = "";
   }
 
+  console.log(page.properties);
   return {
     id: page.id,
     cover: cover,
     title: page.properties.Name.title[0].plain_text,
+    date: page.properties.Date.date,
+    hotel: page.properties.Hotel.rich_text[0].plain_text,
+    address: page.properties.Address.url,
     tags: page.properties.Tags.multi_select,
-    description: page.properties.Description.rich_text[0].plain_text,
-    date: page.properties.Updated.last_edited_time,
     slug: page.properties.Slug.formula.string,
   };
 };
 
 const getConferences = async () => {
   const database = process.env.NOTION_BLOG_DATABASE_ID ?? "";
-  const response = await this.client.databases.query({
+  const response = await notion.databases.query({
     database_id: database,
     filter: {
       property: "Published",
@@ -39,12 +41,6 @@ const getConferences = async () => {
         equals: true,
       },
     },
-    sorts: [
-      {
-        property: "Updated",
-        direction: "descending",
-      },
-    ],
   });
 
   return response.results.map((res) => {
@@ -52,45 +48,45 @@ const getConferences = async () => {
   });
 };
 
-const getConference = async (slug) => {
-  let post, markdown;
+// const getConference = async (slug) => {
+//   let post, markdown;
+//
+//   const database = process.env.NOTION_BLOG_DATABASE_ID ?? "";
+//   // list of blog posts
+//   const response = await this.client.databases.query({
+//     database_id: database,
+//     filter: {
+//       property: "Slug",
+//       formula: {
+//         text: {
+//           equals: slug, // slug
+//         },
+//       },
+//       // add option for tags in the future
+//     },
+//     sorts: [
+//       {
+//         property: "Updated",
+//         direction: "descending",
+//       },
+//     ],
+//   });
+//
+//   if (!response.results[0]) {
+//     throw "No results available";
+//   }
+//
+//   // grab page from notion
+//   const page = response.results[0];
+//
+//   const mdBlocks = await n2m.pageToMarkdown(page.id);
+//   markdown = n2m.toMarkdownString(mdBlocks);
+//   post = pageToPostTransformer(page);
+//
+//   return {
+//     post,
+//     markdown,
+//   };
+// };
 
-  const database = process.env.NOTION_BLOG_DATABASE_ID ?? "";
-  // list of blog posts
-  const response = await this.client.databases.query({
-    database_id: database,
-    filter: {
-      property: "Slug",
-      formula: {
-        text: {
-          equals: slug, // slug
-        },
-      },
-      // add option for tags in the future
-    },
-    sorts: [
-      {
-        property: "Updated",
-        direction: "descending",
-      },
-    ],
-  });
-
-  if (!response.results[0]) {
-    throw "No results available";
-  }
-
-  // grab page from notion
-  const page = response.results[0];
-
-  const mdBlocks = await n2m.pageToMarkdown(page.id);
-  markdown = n2m.toMarkdownString(mdBlocks);
-  post = pageToPostTransformer(page);
-
-  return {
-    post,
-    markdown,
-  };
-};
-
-export default { getConference, getConferences };
+export default { /* getConference, */ getConferences };
