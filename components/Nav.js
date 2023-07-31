@@ -4,7 +4,7 @@ import AboriginalArt from "@/public/assets/images/aboriginal-art.png";
 
 const Nav = () => {
   return (
-    <nav className="bg-yellow-700 z-10 p-4 absolute top-0 left-0 w-full">
+    <nav className="bg-yellow-700 z-10 p-4">
       <div className="container mx-auto">
         <div className="flex items-center justify-center text-black">
           <Link href="/" className="transition rounded p-3 hover:bg-yellow-900">

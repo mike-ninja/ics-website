@@ -3,11 +3,14 @@ import ReactMarkdown from "react-markdown";
 
 const page = async ({ params }) => {
   const conference = await conferencesService.getConference(params.slug);
-
+  console.log(conference.markdown);
   return (
     <>
-      Conference Page
-      <ReactMarkdown>{conference.markdown.parent}</ReactMarkdown>
+      <div className="container markdown">
+        <ReactMarkdown>
+          {conference.markdown.parent}
+        </ReactMarkdown>
+      </div>
     </>
   );
 };

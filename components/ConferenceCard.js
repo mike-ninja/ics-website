@@ -5,7 +5,6 @@ const localizedFormat = require("dayjs/plugin/localizedFormat");
 dayjs.extend(localizedFormat);
 
 const ConferenceCard = ({ conference }) => {
-  console.log(conference.cover);
   return (
     <Link
       href={`/conferences/${conference.slug}`}
