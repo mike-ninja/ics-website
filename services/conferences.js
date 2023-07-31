@@ -1,13 +1,13 @@
-import { Client } from "@notionhq/client";
 import React from "react";
-// import { NotionToMarkdown } from "notion-to-md";
+const { Client } = require("@notionhq/client");
+const { NotionToMarkdown } = require("notion-to-md");
 
 const notion = new Client({ auth: process.env.NOTION_ACCESS_TOKEN });
-// const n2m = new NotionToMarkdown({ notionClient: notion });
+const n2m = new NotionToMarkdown({ notionClient: notion });
 
 const pageToPostTransformer = (page) => {
   let cover = page.cover;
-  console.log(cover);
+
   switch (cover.type) {
     case "file":
       cover = page.cover.file;
@@ -32,6 +32,7 @@ const pageToPostTransformer = (page) => {
   };
 };
 
+// Get all Conferences
 const getConferences = React.cache(async () => {
   const database = process.env.NOTION_BLOG_DATABASE_ID ?? "";
   const response = await notion.databases.query({
@@ -49,6 +50,7 @@ const getConferences = React.cache(async () => {
   });
 });
 
+// Get a conference
 const getConference = React.cache(async (slug) => {
   const database = process.env.NOTION_BLOG_DATABASE_ID ?? "";
   const response = await notion.databases.query({
@@ -68,13 +70,10 @@ const getConference = React.cache(async (slug) => {
     throw "No results available";
   }
 
-  return pageToPostTransformer(response.results[0]);
+  const mdBlocks = await n2m.pageToMarkdown(response.results[0].id);
+  const markdown = n2m.toMarkdownString(mdBlocks);
+  const post = pageToPostTransformer(response.results[0]);
+  return { post, markdown };
 });
 
-const getConferenceBlocks = React.cache(async (pageId) => {
-  const response = await notion.blocks.children
-    .list({ block_id: pageId });
-  return response.results;
-});
-
-export default { getConference, getConferences, getConferenceBlocks, notion };
+export default { getConference, getConferences };

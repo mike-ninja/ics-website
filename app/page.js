@@ -1,14 +1,19 @@
-import Image from 'next/image'
-import ConferencesCards from '@/components/ConferencesCards'
+// import Image from "next/image";
+import ConferencesCards from "@/components/ConferencesCards";
+import Header from "@/components/Header";
 // Landing Page
 
-export default async function Home () {
+// <section>
+//   <ConferencesCards />
+// </section>;
+
+export default async function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>
-        <h2>Hello, Welcome to my app</h2>
-        <ConferencesCards />
+    <>
+      <Header />
+      <div className="container">
+        <span>Hello, Welcome to my app</span>
       </div>
-    </main>
-  )
+    </>
+  );
 }
