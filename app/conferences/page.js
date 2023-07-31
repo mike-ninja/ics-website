@@ -4,9 +4,9 @@ import ConferencesCards from "@/components/ConferencesCards";
 
 const page = () => {
   return (
-    <>
+    <div className="container">
       <ConferencesCards />
-    </>
+    </div>
   );
 };
 

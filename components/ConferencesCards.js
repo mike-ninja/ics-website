@@ -5,13 +5,11 @@ const ConferencesCards = async () => {
   const conferences = await conferencesService.getConferences();
 
   return (
-    <section>
-      <div>
-        {conferences.map((conference) => (
-          <ConferenceCard key={conference.id} conference={conference} />
-        ))}
-      </div>
-    </section>
+    <div className="grid grid-cols-2 gap-2">
+      {conferences.map((conference) => (
+        <ConferenceCard key={conference.id} conference={conference} />
+      ))}
+    </div>
   );
 };
 
