@@ -29,5 +29,5 @@ body {
 /* Tailwind Style */
 
 .container {
-    @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto px-6 sm:px-16;
+    @apply relative justify-center items-center flex-col max-w-7xl mx-auto px-6 sm:px-16;
 }

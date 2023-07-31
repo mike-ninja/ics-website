@@ -5,7 +5,7 @@ const localizedFormat = require("dayjs/plugin/localizedFormat");
 dayjs.extend(localizedFormat);
 
 const ConferenceCard = ({ conference }) => {
-  console.log(conference.date);
+  console.log(conference.cover);
   return (
     <Link
       href={`/conferences/${conference.slug}`}
@@ -16,13 +16,17 @@ const ConferenceCard = ({ conference }) => {
         className="flex flex-col rounded-xl shadow-lg overflow-hidden"
       >
         <div className="flex-shrink-0">
-          <img className="h-64 w-full object-fit" src={conference.cover} alt="" />
+          <img
+            className="h-64 w-full object-fit"
+            src={conference.cover}
+            alt={conference.title}
+          />
         </div>
         <div className="flex-1 bg-gray-50 pt-2 pb-6 px-4 flex flex-col justify-between">
           <div className="flex-1">
             <span className="block mt-2">
               <h4 className="text-xs font-medium text-gray-600">
-                {dayjs(conference.date.start).format("LL")}
+                {dayjs(conference.date.start).format("MMMM DD")} - {dayjs(conference.date.end).format("DD, YYYY")}
               </h4>
             </span>
             <span className="block mt-2">
@@ -30,7 +34,6 @@ const ConferenceCard = ({ conference }) => {
                 {conference.title}
               </h3>
             </span>
-
             <span className="block mt-2 space-x-4">
               {conference.tags.map((tag) => (
                 <span

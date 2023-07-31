@@ -5,7 +5,7 @@ const ConferencesCards = async () => {
   const conferences = await conferencesService.getConferences();
 
   return (
-    <div className="grid grid-cols-2 gap-2">
+    <div className="grid grid-cols-2 gap-10">
       {conferences.map((conference) => (
         <ConferenceCard key={conference.id} conference={conference} />
       ))}
