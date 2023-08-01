@@ -2,13 +2,26 @@ import conferencesService from "@/services/conferences";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
+const PageHeader = ({ cover }) => {
+  return (
+    <div className="my-3">
+      <img src={cover} />
+    </div>
+  );
+};
+
 const page = async ({ params }) => {
-  const conference = await conferencesService.getConference(params.slug);
-  console.log(conference.markdown);
+  const { post, markdown } = await conferencesService.getConference(
+    params.slug,
+  );
   return (
     <>
       <div className="container markdown">
-        <ReactMarkdown children={conference.markdown.parent} remarkPlugins={[remarkGfm]} />
+        <PageHeader cover={post.cover} />
+        <ReactMarkdown
+          children={markdown.parent}
+          remarkPlugins={[remarkGfm]}
+        />
       </div>
     </>
   );

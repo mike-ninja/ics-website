@@ -8,7 +8,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 const pageToPostTransformer = (page) => {
   let cover = page.cover;
 
-  console.log(cover.type)
+  console.log(cover.type);
   switch (cover.type) {
     case "file":
       cover = cover.file.url;
