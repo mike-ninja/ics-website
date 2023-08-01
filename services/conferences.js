@@ -72,10 +72,10 @@ const getConference = React.cache(async (slug) => {
   }
 
   const mdBlocks = await n2m.pageToMarkdown(response.results[0].id);
-  console.log("----------------------------------")
-  console.log(mdBlocks)
-  console.log("----------------------------------")
   const markdown = n2m.toMarkdownString(mdBlocks);
+  console.log("--------------------------------------------------------------------")
+  console.log(markdown)
+  console.log("--------------------------------------------------------------------")
   const post = pageToPostTransformer(response.results[0]);
   return { post, markdown };
 });
