@@ -47,5 +47,5 @@ body {
 }
 
 .markdown p {
-  @apply text-justify;
+  @apply text-justify pb-5;
 }
