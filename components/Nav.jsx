@@ -32,8 +32,7 @@ const Nav = () => {
   ];
 
   return (
-    <nav className="bg-yellow-700 p-4">
-      <div className="flex justify-between items-center text-black">
+    <nav className="bg-yellow-700 p-4 w-full flex justify-between items-center text-black">
         <Link href="/">
           <Image
             src={AboriginalFlag}
@@ -86,7 +85,6 @@ const Nav = () => {
             </ul>
           </div>
         </div>
-      </div>
     </nav>
   );
 };

@@ -15,7 +15,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Nav />
-        {children}
+        <main className="app">
+          {children}
+        </main>
       </body>
     </html>
   );
