@@ -32,23 +32,23 @@ const Nav = () => {
   ];
 
   return (
-    <nav className="bg-yellow-700 p-4 w-full flex justify-between items-center text-black">
+    <nav className="bg-[url('/assets/images/nav-texture.svg')] w-full h-16 flex justify-between items-center text-black">
         <Link href="/">
           <Image
             src={AboriginalFlag}
             alt="Aboriginal Flag"
-            width="80"
+  width="80"
             className="cursor-pointer rounded-md"
             priority
           />
         </Link>
-        <div className="hidden sm:flex">
+        <div className="hidden sm:flex bg-transparent_brown h-full">
           <ul className="hidden sm:flex">
             {navItems.map((item) => (
               <Link
                 href={item.link}
               >
-                <li className="transition rounded p-3 hover:bg-yellow-900">
+                <li className="nav_item">
                   {item.text}
                 </li>
               </Link>

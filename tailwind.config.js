@@ -21,6 +21,7 @@ module.exports = {
       },
       colors: {
         'primary-orange': '#FF5722',
+        'transparent_brown': '#884A2CCC',
       }
     },
   },
