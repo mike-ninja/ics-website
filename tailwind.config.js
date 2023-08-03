@@ -15,6 +15,7 @@ module.exports = {
       backgroundImage: {
         "nav_texture": "url('/assets/images/nav-texture.svg')",
         "header_bg": "url('/assets/images/header-bg.png')",
+        "divider_dots": "url('/assets/images/divider-dots.svg')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
