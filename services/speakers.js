@@ -19,11 +19,13 @@ const pageToPostTransformer = (page) => {
       cover = "";
   }
 
-  console.log(page)
   return {
     id: page.id,
     cover: cover,
     title: page.properties.Name.title[0].plain_text,
+    organization: page.properties.Organization.rich_text[0].plain_text,
+    position: page.properties.Position.rich_text[0].plain_text,
+    url: page.properties.URL.url,
     tags: page.properties.Tags.multi_select,
     slug: page.properties.Slug.formula.string,
   };
@@ -46,29 +48,6 @@ const getSpeakers = React.cache(async () => {
     return pageToPostTransformer(res);
   });
 });
-
-const getSpeakersForConference = React.cache(async ({ conference }) => {
-  const database = process.env.NOTION_SPEAKER_DATABASE_ID ?? "";
-  const response = await notion.databases.query({
-    database_id: database,
-    filter: {
-      property: "Slug",
-      formula: {
-        string: {
-          equals: slug, // slug
-        },
-      },
-      // add option for tags in the future
-    },
-  });
-
-  if (!response.results[0]) {
-    throw "No results available";
-  }
-
-  const post = pageToPostTransformer(response.results[0]);
-  return post;
-})
 
 // Get a speaker
 const getSpeaker = React.cache(async (slug) => {
@@ -96,4 +75,4 @@ const getSpeaker = React.cache(async (slug) => {
   return { post, markdown };
 });
 
-export default { getConference, getConferences };
+export default { getSpeakers, getSpeaker };

@@ -16,8 +16,27 @@ dayjs.extend(localizedFormat);
 //     </h4>
 //   </div>
 // </Link>
+const Speakers = ({ speakers }) => {
+  return (
+   <div>
+      {speakers.map(speaker =>
+        <h3>{speaker.title}</h3>
+      )}
+    </div>
+  )
+};
 
-const Conference = ({ conference }) => {
+const Conference = ({ conference, speakers }) => {
+  const conferenceSpeakers = speakers.filter((speaker) => {
+    if (
+      conference.speakers.some(
+        (conferenceSpeakerTags) => conferenceSpeakerTags.name === speaker.title,
+      )
+    ) {
+      return speaker;
+    }
+  });
+
   return (
     <div className="my-5 md:my-7 flex px-[7%] md:px-[10%]">
       <div className="date_wrapper">
@@ -29,6 +48,7 @@ const Conference = ({ conference }) => {
       <div className="w-full rounded-lg border-2 border-dark_brown text-right pr-2 pt-3">
         <h3>{conference.title}</h3>
         <h4>{conference.hotel}</h4>
+        <Speakers speakers={conferenceSpeakers} />
       </div>
     </div>
   );

@@ -19,7 +19,6 @@ const pageToPostTransformer = (page) => {
       cover = "";
   }
 
-  console.log(page.properties);
   return {
     id: page.id,
     cover: cover,
@@ -28,13 +27,14 @@ const pageToPostTransformer = (page) => {
     hotel: page.properties.Hotel.rich_text[0].plain_text,
     address: page.properties.Address.url,
     tags: page.properties.Tags.multi_select,
+    speakers: page.properties.Speakers.multi_select,
     slug: page.properties.Slug.formula.string,
   };
 };
 
 // Get all Conferences
 const getConferences = React.cache(async () => {
-  const database = process.env.NOTION_BLOG_DATABASE_ID ?? "";
+  const database = process.env.NOTION_CONFERENCE_DATABASE_ID ?? "";
   const response = await notion.databases.query({
     database_id: database,
     filter: {
@@ -52,7 +52,7 @@ const getConferences = React.cache(async () => {
 
 // Get a conference
 const getConference = React.cache(async (slug) => {
-  const database = process.env.NOTION_BLOG_DATABASE_ID ?? "";
+  const database = process.env.NOTION_CONFERENCE_DATABASE_ID ?? "";
   const response = await notion.databases.query({
     database_id: database,
     filter: {
