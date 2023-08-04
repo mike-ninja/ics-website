@@ -19,7 +19,7 @@
 /* } */
 /**/
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   /* color: rgb(var(--foreground-rgb)); */
   /* background: linear-gradient( */
   /*     to bottom, */
@@ -37,7 +37,7 @@ body {
 
 /* Navbar */
 .nav_item {
- @apply transition-all px-5 h-full hover:bg-yellow-900 text-white font-bold text-xl tracking-wider flex justify-center items-center uppercase; 
+  @apply transition-all px-5 h-full hover:bg-yellow-900 text-white font-bold text-xl tracking-wider flex justify-center items-center uppercase;
 }
 
 /* Header */
@@ -70,6 +70,14 @@ body {
   @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
 }
 
+/* Conferences Card */
+.date_wrapper {
+  @apply relative w-9 h-[6.5rem] md:h-[7.8rem];
+}
+
+.date_flipped {
+  @apply uppercase rounded transform rotate-[270deg] absolute top-1/2 translate-y-[-50%] translate-x-[-2rem] md:translate-x-[-3rem] font-mono font-bold tracking-tighter text-4xl md:text-5xl;
+}
 
 /* .black_btn { */
 /*   @apply rounded-full border border-black bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm font-inter flex items-center justify-center; */
@@ -78,7 +86,6 @@ body {
 /* .outline_btn { */
 /*   @apply rounded-full border border-black bg-transparent py-1.5 px-5 text-black transition-all hover:bg-black hover:text-white text-center text-sm font-inter flex items-center justify-center; */
 /* } */
-
 
 /* .orange_gradient { */
 /*   @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent; */

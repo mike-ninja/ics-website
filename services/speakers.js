@@ -19,22 +19,19 @@ const pageToPostTransformer = (page) => {
       cover = "";
   }
 
-  console.log(page.properties);
+  console.log(page)
   return {
     id: page.id,
     cover: cover,
     title: page.properties.Name.title[0].plain_text,
-    date: page.properties.Date.date,
-    hotel: page.properties.Hotel.rich_text[0].plain_text,
-    address: page.properties.Address.url,
     tags: page.properties.Tags.multi_select,
     slug: page.properties.Slug.formula.string,
   };
 };
 
-// Get all Conferences
-const getConferences = React.cache(async () => {
-  const database = process.env.NOTION_BLOG_DATABASE_ID ?? "";
+// Get all Speakers
+const getSpeakers = React.cache(async () => {
+  const database = process.env.NOTION_SPEAKER_DATABASE_ID ?? "";
   const response = await notion.databases.query({
     database_id: database,
     filter: {
@@ -50,9 +47,32 @@ const getConferences = React.cache(async () => {
   });
 });
 
-// Get a conference
-const getConference = React.cache(async (slug) => {
-  const database = process.env.NOTION_BLOG_DATABASE_ID ?? "";
+const getSpeakersForConference = React.cache(async ({ conference }) => {
+  const database = process.env.NOTION_SPEAKER_DATABASE_ID ?? "";
+  const response = await notion.databases.query({
+    database_id: database,
+    filter: {
+      property: "Slug",
+      formula: {
+        string: {
+          equals: slug, // slug
+        },
+      },
+      // add option for tags in the future
+    },
+  });
+
+  if (!response.results[0]) {
+    throw "No results available";
+  }
+
+  const post = pageToPostTransformer(response.results[0]);
+  return post;
+})
+
+// Get a speaker
+const getSpeaker = React.cache(async (slug) => {
+  const database = process.env.NOTION_SPEAKER_DATABASE_ID ?? "";
   const response = await notion.databases.query({
     database_id: database,
     filter: {
