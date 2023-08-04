@@ -1,17 +1,30 @@
 const groupFunctionByYear = (conferences) => {
-  const conferencesByYear = {};
+  let conferencesByYear = [];
 
   conferences.forEach((conference) => {
     const startYear = conference.date.start.split("-")[0]; // Extract the year from the start date
+    const foundYear = conferencesByYear.find((conferenceYear) =>
+      conferenceYear.year === startYear
+    );
 
-    if (!conferencesByYear[startYear]) {
-      conferencesByYear[startYear] = [];
+    if (!foundYear) {
+      const newYear = {
+        year: startYear,
+        conferences: [{ ...conference }],
+      };
+      conferencesByYear = conferencesByYear.concat(newYear);
+    } else {
+      const updatedYear = {
+        ...foundYear,
+        conferences: foundYear.conferences.concat(conference),
+      };
+      conferencesByYear = conferencesByYear.map((conferenceYear) =>
+        conferenceYear.year === startYear ? updatedYear : conferenceYear
+      );
     }
-
-    conferencesByYear[startYear].push(conference);
   });
 
-  return conferencesByYear;
+  return conferencesByYear.sort((a, b) => a.year - b.year);
 };
 
 export default groupFunctionByYear;
