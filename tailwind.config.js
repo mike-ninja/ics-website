@@ -16,9 +16,6 @@ module.exports = {
         "nav_texture": "url('/assets/images/nav-texture.svg')",
         "header_bg": "url('/assets/images/header-bg.png')",
         "divider_dots": "url('/assets/images/divider-dots.svg')",
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
         'transparent_brown': '#884A2CCC',
@@ -28,11 +25,6 @@ module.exports = {
         'light_beige': '#FFF0D3',
         'blood_red': '#F53333',
       },
-      screens: {
-        'tablet': '640px',
-        'latop': '1024px',
-        'desktop': '1280px',
-      }
     },
   },
   plugins: [],

@@ -3,7 +3,7 @@ import Image from "next/image";
 const AboutCards = () => {
   return (
     <>
-      <section className="py-6">
+      <section>
         <div className="p-20 bg-white text-black text-justify rounded-lg">
           <h2 className="p-5 bg-yellow-700 rounded-lg">
             In ALL Indigenous Conference Services (ICS) documents, the term
@@ -16,7 +16,7 @@ const AboutCards = () => {
           </h2>
         </div>
       </section>
-      <section className="py-6">
+      <section>
         <div className="grid grid-cols-3 gap-5">
           <div>
             <div className="bg-[url('/assets/images/johan-mouchet-unsplash.jpg')] bg-cover bg-center w-full h-60 mb-4 rounded-md"></div>
