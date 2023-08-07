@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Header = () => {
   return (
     <header className="bg-header_bg bg-cover bg-center h-[60vh] lg:h-[80vh] flex flex-col justify-center items-center border-t-4 border-solid border-dark_brown">
@@ -8,23 +10,23 @@ const Header = () => {
           </h1>
           <h2 className="header_description">THE IMPOSSIBLE IS JUST THE NEXT STEP FOR US IN OUR JOURNEY</h2>
         </div>
-        <div className="flex justify-between mt-10 text-white">
-          <a
+        <div className="flex justify-between text-white">
+          <Link
             className="btn"
             href=""
             target="_blank"
             rel="noreferrer"
           >
             Register
-          </a>
-          <a
+          </Link>
+          <Link
             className="btn"
             href=""
             target="_blank"
             rel="noreferrer"
           >
             Submit A Paper
-          </a>
+          </Link>
         </div>
       </div>
     </header>

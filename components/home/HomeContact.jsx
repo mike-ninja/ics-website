@@ -7,6 +7,8 @@ const HomeContact = () => {
       <div className='container'>
         <h2>Contact Us</h2>
         <h3>Indigenous Conference Services</h3>
+        <h4>Email: adminics@iinet.net.au</h4>
+        <h4>Tel: (07) 4194 2803</h4>
         <Link href='/contact' className='btn'>
           Enquiry Form
         </Link>
