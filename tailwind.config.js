@@ -16,6 +16,7 @@ module.exports = {
         "nav_texture": "url('/assets/images/nav-texture.svg')",
         "header_bg": "url('/assets/images/header-bg.png')",
         "divider_dots": "url('/assets/images/divider-dots.svg')",
+        "contact_us": "url('/assets/images/contact-us.jpg')",
       },
       colors: {
         'transparent_brown': '#884A2CCC',
