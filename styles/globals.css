@@ -22,11 +22,11 @@ section {
 
 /* Text Styles */
 h2 {
-  @apply text-4xl font-bold text-dark_brown tracking-tight uppercase mb-4;
+  @apply text-4xl font-bold text-dark_brown tracking-tight uppercase;
 }
 
 h3 {
-  @apply text-xl font-semibold text-light_brown tracking-tight uppercase;
+  @apply text-xl font-semibold tracking-tight uppercase;
 }
 
 p {

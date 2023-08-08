@@ -10,7 +10,7 @@ const Conferences = async () => {
   return (
     <section id="conferences" className="relative">
       <h1 className="text-center text-[1.6rem] md:text-3xl lg:text-4xl mb-2 md:mb-4 lg:mb-12 uppercase text-light_brown font-semibold">
-        Upcoming&nbsp;ICS&nbsp;Conferences
+        Upcoming&nbsp;ICS&nbsp;Conferences:
       </h1>
       <div className="container grid grid-cols-1 lg:grid-cols-2">
         {conferenceByYear.map((conferenceYear) => (
@@ -23,6 +23,11 @@ const Conferences = async () => {
             ))}
           </div>
         ))}
+      </div>
+      <div className="flex justify-center">
+        <a href="/conferences" className="btn btn_primary">
+          More&nbsp;Conferences
+        </a>
       </div>
       <DividerDots />
     </section>

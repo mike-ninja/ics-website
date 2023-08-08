@@ -1,28 +1,28 @@
 import Link from "next/link";
+import { BiSolidRightArrow } from "react-icons/bi";
 
 const HomeAbout = () => {
   return (
     <section className="bg-light_beige">
       <div className="container grid gap-3 lg:gap-10 lg:grid-cols-2 items-center">
-        <div className="h-[400px] flex my-3">
-          <div className="bg-[url('/assets/images/about-img-1.jpg')] bg-cover bg-center w-1/2 h-full translate-y-[10px] translate-x-[3px] rounded transition-all hover:scale-105 hover:z-10">
-          </div>
-          <div className="bg-[url('/assets/images/about-img-2.jpg')] bg-cover bg-center w-1/2 h-full translate-y-[-10px] translate-x-[-3px] rounded transition-all hover:scale-105 ">
-          </div>
-        </div>
         <div>
           <h2 className="text-light_blue">About ICS</h2>
+          <div className="flex text-metal_gray items-center mb-3">
+            <BiSolidRightArrow />
+            <h3>
+              Indigenous Conference Services
+            </h3>
+          </div>
           <div>
             <div className="inline-block">
               <p>
-                INDIGENOUS CONFERENCE SERVICES is an Indigenous-owned company
-                operating independently and without government funding. They
-                prioritize First Nations culture and self-determination. With a
-                skilled team, they manage various events for community
-                organizations, focusing on promoting Indigenous identity,
-                education, and partnerships. By funding conferences through
-                partnerships, they avoid government funding and support agenda
-                customization.
+                ICS is an Indigenous-owned company operating independently and
+                without government funding. They prioritize First Nations
+                culture and self-determination. With a skilled team, they manage
+                various events for community organizations, focusing on
+                promoting Indigenous identity, education, and partnerships. By
+                funding conferences through partnerships, they avoid government
+                funding and support agenda customization.
               </p>
               <p>
                 CEO Tom Callaghan specializes in working with NGOs and
@@ -35,6 +35,8 @@ const HomeAbout = () => {
               </Link>
             </div>
           </div>
+        </div>
+        <div className="h-[400px] flex my-3 bg-dark_beige rounded">
         </div>
       </div>
     </section>
