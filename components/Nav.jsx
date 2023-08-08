@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import AboriginalFlag from "@/public/assets/images/Australian_Aboriginal_Flag.svg";
+import Logo from "@/public/assets/images/logo-ics.png";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
@@ -35,9 +35,9 @@ const Nav = () => {
     <nav className="bg-nav_texture w-full h-16 flex justify-between items-center text-black">
       <Link href="/">
         <Image
-          src={AboriginalFlag}
+          src={Logo}
           alt="Aboriginal Flag"
-          width="80"
+          width="150"
           className="cursor-pointer rounded-md ml-4"
           priority
         />

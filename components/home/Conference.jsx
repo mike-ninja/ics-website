@@ -38,11 +38,10 @@ const Conference = ({ conference, speakers }) => {
     <Link
       href={`/conferences/${conference.slug}`}
     >
-      <div className="my-5 md:my-7 flex px-[7%] md:px-[10%] transition-all duration-300 hover:scale-105">
+      <div className="my-5 md:my-7 flex transition-all duration-300 hover:scale-105">
         <div className="date_wrapper">
           <h2 className="date_flipped">
-            {dayjs(conference.date.start).format("DDMMM")}
-            {" "}
+            {dayjs(conference.date.start).format("DD MMM")}
           </h2>
         </div>
         <div className="w-full rounded-lg border-2 border-dark_brown text-right pr-2 pt-3">

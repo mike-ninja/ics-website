@@ -22,7 +22,7 @@ const HomeAbout = () => {
               Voluptate laboris sint cupidatat ullamco ut ea consectetur et est
               culpa et culpa duis.
             </p>
-            <Link href="/about" className="btn">
+            <Link href="/about" className="btn btn_primary">
               Find Out More
             </Link>
           </div>

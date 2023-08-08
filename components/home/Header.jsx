@@ -10,9 +10,9 @@ const Header = () => {
           </h1>
           <h2 className="header_description">THE IMPOSSIBLE IS JUST THE NEXT STEP FOR US IN OUR JOURNEY</h2>
         </div>
-        <div className="flex justify-between text-white">
+        <div className="flex text-white justify-center">
           <Link
-            className="btn"
+            className="btn btn_primary md:mr-2 lg:mr-5"
             href=""
             target="_blank"
             rel="noreferrer"
@@ -20,12 +20,12 @@ const Header = () => {
             Register
           </Link>
           <Link
-            className="btn"
+            className="btn btn_variant md:ml-2 lg:ml-5"
             href=""
             target="_blank"
             rel="noreferrer"
           >
-            Submit A Paper
+            Submit&nbsp;A&nbsp;Paper
           </Link>
         </div>
       </div>

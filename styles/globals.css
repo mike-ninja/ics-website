@@ -17,8 +17,10 @@ section {
   @apply px-5 mx-auto md:px-10 lg:px-20 xl:px-44;
 }
 
-/* Text Styles */
+/* Table Style */
 
+
+/* Text Styles */
 h2 {
   @apply text-4xl font-bold text-dark_brown tracking-tight uppercase;
 }
@@ -36,12 +38,20 @@ p {
 /* } */
 
 .btn {
-  @apply bg-light_brown rounded inline-block text-white mt-4 px-6 py-1;
+  @apply rounded inline-block text-white mt-4 px-6 py-1 transition-transform transform hover:scale-110 md:text-xl lg:text-2xl uppercase;
+}
+
+.btn_primary {
+  @apply bg-light_brown border-2 border-light_brown;
+}
+
+.btn_variant {
+  @apply border-2 border-transparent hover:border-white;
 }
 
 /* Navbar */
 .nav_item {
-  @apply transition-all px-5 h-full hover:bg-yellow-900 text-white font-bold text-xl tracking-wider flex justify-center items-center uppercase;
+  @apply transition-all px-5 h-full hover:bg-yellow-900 text-white font-semibold text-xl tracking-wider flex justify-center items-center uppercase;
 }
 
 /* Header */
@@ -76,11 +86,11 @@ p {
 
 /* Conferences Card */
 .date_wrapper {
-  @apply relative w-9 h-[6.5rem] md:h-[7.8rem];
+  /* @apply relative w-9 h-[10rem] md:h-[7.8rem]; */
 }
 
 .date_flipped {
-  @apply uppercase rounded transform rotate-[270deg] absolute top-1/2 translate-y-[-50%] translate-x-[-2rem] md:translate-x-[-3rem] font-mono font-bold tracking-tighter text-4xl md:text-5xl;
+  /* @apply uppercase rounded transform rotate-[270deg] absolute top-1/2 translate-y-[-50%] translate-x-[-2rem] md:translate-x-[-3rem] font-mono font-bold tracking-tighter text-4xl md:text-5xl; */
 }
 
 /* .black_btn { */
