@@ -87,6 +87,7 @@ p {
 /* Conferences Card */
 .date_wrapper {
   /* @apply relative w-9 h-[10rem] md:h-[7.8rem]; */
+  @apply text-lg;
 }
 
 .date_flipped {
