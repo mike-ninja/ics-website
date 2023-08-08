@@ -44,32 +44,26 @@ const Nav = () => {
       </Link>
       <div className="hidden sm:flex bg-transparent_brown h-full">
         <ul className="hidden sm:flex">
-          <Link
-            href="/about"
-          >
+          <Link href="/about">
             <li className="nav_item">
               About
             </li>
           </Link>
           <div className="w-1 bg-white my-2 rounded"></div>
-          <Link
-            href="/conference"
-          >
+          <Link href="/conference">
             <li className="nav_item">
               Conferences
             </li>
           </Link>
           <div className="w-1 bg-white my-2 rounded"></div>
-          <Link
-            href="/contact"
-          >
+          <Link href="/contact">
             <li className="nav_item">
-              Contact 
+              Contact
             </li>
           </Link>
         </ul>
       </div>
-      <div onClick={handleNav} className="sm:hidden cursor-pointer pl-24">
+      <div onClick={handleNav} className="sm:hidden cursor-pointer bg-transparent_brown h-full flex items-center px-3 text-white">
         <AiOutlineMenu size={25} />
       </div>
       <div
