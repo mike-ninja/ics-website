@@ -50,32 +50,22 @@ dayjs.extend(localizedFormat);
 //   );
 // };
 
-const Conference = ({ conference, speakers }) => {
-  const conferenceSpeakers = speakers.filter((speaker) => {
-    if (
-      conference.speakers.some(
-        (conferenceSpeakerTags) => conferenceSpeakerTags.name === speaker.title,
-      )
-    ) {
-      return speaker;
-    }
-  });
-
+const Conference = ({ conference }) => {
   return (
     <div className="flex py-3 uppercase transition-all transform hover:scale-105">
       <div className="relative flex-none date_wrapper w-10 uppercase text-blood_red">
-        <span className="text-[1.7rem] text-light_blue font-mono font-semibold tracking-tighter absolute transform rotate-[270deg] top-1/2 translate-y-[-50%] translate-x-[-0.8rem]">
+        <span className="text-[1.6rem] text-light_blue font-mono font-semibold tracking-tighter absolute transform rotate-[270deg] top-1/2 translate-y-[-50%] translate-x-[-0.8rem]">
           {dayjs(conference.date.start).format("DD")}
           &nbsp;
           {dayjs(conference.date.start).format("MMM")}
         </span>
       </div>
-      <div className="flex-1 flex-col text-right rounded-lg py-2 pr-3 bg-light_beige">
+      <div className="flex-1 flex-col shadow-lg text-right rounded-lg py-2 pr-3 bg-light_beige">
         <div className="text-light_brown font-semibold text-[1.2rem]">
           {conference.title}
-        </div>
-        <div className="text-dark_brown">{conference.hotel}</div>
-        <div className="text-dark_brown mt-2 capitalize">Read&nbsp;More</div>
+        </div> 
+        <div className="text-metal_gray">{conference.hotel}</div>
+        <div className="text-metal_gray mt-2 capitalize">Read&nbsp;More</div>
       </div>
     </div>
   );
