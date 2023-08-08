@@ -1,11 +1,11 @@
 import Link from "next/link";
-import Image from "next/image";
-// import ContactImage from "@/public/assets/images/contact-us.jpg";
+
+// TODO: Hover effect for email and telephone 
 
 const HomeContact = () => {
   return (
     <section>
-      <div className="container grid md:grid-cols-2 gap-3 h-[300px] md:h-[350px] lg:max-w-[1300px]">
+      <div className="container grid md:grid-cols-2 gap-3 lg:gap-10 h-[300px] md:h-[350px] lg:max-w-[1300px]">
         <div className="hidden rounded md:block bg-contact_us bg-cover bg-center h-full">
         </div>
         <div className="bg-dark_beige rounded inline-flex">

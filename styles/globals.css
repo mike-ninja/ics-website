@@ -22,7 +22,7 @@ section {
 
 /* Text Styles */
 h2 {
-  @apply text-4xl font-bold text-dark_brown tracking-tight uppercase;
+  @apply text-4xl font-bold text-dark_brown tracking-tight uppercase mb-4;
 }
 
 h3 {
@@ -30,7 +30,7 @@ h3 {
 }
 
 p {
-  @apply text-justify;
+  @apply text-justify text-metal_gray mb-4;
 }
 
 
@@ -44,6 +44,10 @@ p {
 
 .btn_variant {
   @apply border-2 border-transparent hover:border-white;
+}
+
+.btn_blue {
+  @apply bg-light_blue border-2 border-light_blue;
 }
 
 /* Navbar */

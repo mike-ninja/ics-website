@@ -25,6 +25,8 @@ module.exports = {
         'dark_beige': '#E7B66C',
         'light_beige': '#FFF0D3',
         'blood_red': '#F53333',
+        'light_blue': '#5AD4EF',
+        'metal_gray': '#545454',
       },
     },
   },
