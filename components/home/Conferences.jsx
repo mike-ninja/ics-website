@@ -11,10 +11,10 @@ const Conferences = async () => {
 
   return (
     <section className="bg-light_beige relative">
-      <div className="container">
+      <div className="container grid grid-cols-1 lg:grid-cols-2">
         {conferenceByYear.map((conferenceYear) => (
-          <div>
-            <h2 className="text-center text-3xl font-bold py-4">
+          <div className="mb-10">
+            <h2 className="text-center text-3xl font-bold">
               {conferenceYear.year} Conferences
             </h2>
             {conferenceYear.conferences.map((conference) => (

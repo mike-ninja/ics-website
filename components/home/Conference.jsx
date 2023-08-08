@@ -9,8 +9,6 @@ import dayjs from "dayjs";
 const localizedFormat = require("dayjs/plugin/localizedFormat");
 dayjs.extend(localizedFormat);
 
-// <BiSolidRightArrow style={{display: showSpeakers ? "none" : ""}}/>
-// <BiSolidDownArrow style={{display: showSpeakers ? "" : "none"}}/>
 const Speakers = ({ speakers }) => {
   const [showSpeakers, setShowSpeakers] = useState(false);
   return (
@@ -44,7 +42,9 @@ const Speakers = ({ speakers }) => {
           opacity: showSpeakers ? "1" : "0",
         }}
       >
-        {speakers.map((speaker) => <div className="capitalize">{speaker.title}</div>)}
+        {speakers.map((speaker) => (
+          <div className="capitalize">{speaker.title}</div>
+        ))}
       </div>
     </div>
   );

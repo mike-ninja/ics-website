@@ -10,7 +10,7 @@ body {
 
 /* Container Styles */
 section {
-  @apply mb-10 pt-10;
+  @apply py-10;
 }
 
 .container {
