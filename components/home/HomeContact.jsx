@@ -5,7 +5,7 @@ import Image from "next/image";
 const HomeContact = () => {
   return (
     <section>
-      <div className="container grid md:grid-cols-2 gap-3 h-[300px] md:h-[350px]">
+      <div className="container grid md:grid-cols-2 gap-3 h-[300px] md:h-[350px] lg:max-w-[1300px]">
         <div className="hidden rounded md:block bg-contact_us bg-cover bg-center h-full">
         </div>
         <div className="bg-dark_beige rounded inline-flex">

@@ -62,7 +62,7 @@ const Conference = ({ conference, speakers }) => {
   });
 
   return (
-    <div className="flex py-3 uppercase">
+    <div className="flex py-3 uppercase transition-all transform hover:scale-105">
       <div className="relative flex-none date_wrapper w-10 uppercase text-blood_red">
         <span className="text-[1.7rem] font-mono font-semibold tracking-tighter absolute transform rotate-[270deg] top-1/2 translate-y-[-50%] translate-x-[-0.8rem]">
           {dayjs(conference.date.start).format("DD")}

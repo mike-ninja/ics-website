@@ -10,7 +10,7 @@ body {
 
 /* Container Styles */
 section {
-  @apply py-10;
+  @apply py-10 lg:py-16;
 }
 
 .container {
@@ -33,12 +33,9 @@ p {
   @apply text-justify;
 }
 
-/* .btn { */
-/*   @apply bg-light_brown rounded px-6 py-1 transition-transform transform hover:scale-110 text-lg md:text-xl lg:text-2xl uppercase; */
-/* } */
 
 .btn {
-  @apply rounded inline-block text-white mt-4 px-6 py-1 transition-transform transform hover:scale-110 md:text-xl lg:text-2xl uppercase;
+  @apply rounded inline-block text-white mt-4 px-6 py-1 transition-transform transform hover:scale-105 md:text-xl lg:text-2xl uppercase;
 }
 
 .btn_primary {
