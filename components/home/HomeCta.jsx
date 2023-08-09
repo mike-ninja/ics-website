@@ -31,17 +31,18 @@ const HomeCta = () => {
       ],
     },
   ];
+
   return (
-    <section>
-      <div className="container lg:my-12 text-metal_gray">
+    <section className="bg-dark_beige text-white">
+      <div className="container lg:my-12">
         {cta.map((c) => (
           <div className="mb-5 md:mb-7">
             <div className="flex items-center mb-1 md:mb-2 text-xl md:text-3xl">
               <CiCircleCheck className="mr-1" />
-              <span className="text-dark_brown">{c.header}</span>
+              <span>{c.header}</span>
             </div>
             {c.description.map((desc) => (
-              <p className="md:text-2xl mb-1">{desc}</p>
+              <p className="md:text-2xl mb-1 text-white">{desc}</p>
             ))}
           </div>
         ))}
