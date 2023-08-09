@@ -1,5 +1,8 @@
 import { CiCircleCheck } from "react-icons/ci";
 
+// TODO: Make 'advantages of card' clickable with effects
+// TODO: Make heading "Become a part of ICS"
+
 const HomeCta = () => {
   const cta = [
     {
@@ -33,17 +36,15 @@ const HomeCta = () => {
   ];
 
   return (
-    <section className="bg-dark_beige text-white">
-      <div className="container lg:my-12">
+    <section className="bg-dark_beige text-white p-3 lg:py-10">
+      <div className="container bg-off_white rounded-xl py-5 grid grid-cols-1 gap-3">
         {cta.map((c) => (
-          <div className="mb-5 md:mb-7">
-            <div className="flex items-center mb-1 md:mb-2 text-xl md:text-3xl">
+          <div>
+            <div className="flex text-dark_brown items-center mb-1 md:mb-2 text-xl md:text-3xl">
               <CiCircleCheck className="mr-1" />
-              <span>{c.header}</span>
+              <h3>{c.header}</h3>
             </div>
-            {c.description.map((desc) => (
-              <p className="md:text-2xl mb-1 text-white">{desc}</p>
-            ))}
+            {c.description.map((desc) => <p className="mb-1">{desc}</p>)}
           </div>
         ))}
       </div>

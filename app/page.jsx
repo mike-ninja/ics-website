@@ -1,8 +1,8 @@
 import Header from "@/components/home/Header";
 import Conferences from "@/components/home/Conferences";
 import HomeAbout from "@/components/home/HomeAbout";
-import HomeContact from "@/components/home/HomeContact";
-import HomeCta from "@/components/home/HomeCta";
+import Advantages from "@/components/home/Advantages";
+import CallToAction from "@/components/home/CallToAction";
 
 export default async function Home() {
   return (
@@ -10,8 +10,8 @@ export default async function Home() {
       <Header />
       <Conferences />
       <HomeAbout />
-      <HomeCta />
-      <HomeContact />
+      <Advantages />
+      <CallToAction />
     </>
   );
 }
