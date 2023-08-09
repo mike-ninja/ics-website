@@ -5,13 +5,12 @@ import Link from "next/link";
 const HomeContact = () => {
   return (
     <section>
-      <div className="container grid md:grid-cols-2 gap-3 lg:gap-10 h-[300px] md:h-[350px] lg:max-w-[1300px]">
+      <div className="container grid md:grid-cols-2 gap-3 lg:gap-10 h-[300px] md:h-[350px] max-w-[1300px]">
         <div className="hidden rounded md:block bg-contact_us bg-cover bg-center h-full">
         </div>
         <div className="bg-dark_beige rounded inline-flex">
-          <div className="my-auto mx-auto md:ml-10 grid gap-1 uppercase">
+          <div className="my-auto mx-auto md:ml-10">
             <h2>Contact Us</h2>
-            <div className="h-[2px] w-16 bg-dark_brown mb-2"></div>
             <p className="text-dark_brown">
               <a href="mailto:adminics@iinet.net.au" target="_blank" rel="noreferrer">
                 Email: adminics@iinet.net.au

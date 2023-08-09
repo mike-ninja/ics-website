@@ -12,7 +12,7 @@ const Conferences = async () => {
       <h1 className="text-center text-[1.6rem] md:text-3xl lg:text-4xl mb-2 md:mb-4 lg:mb-12 uppercase text-light_brown font-semibold">
         Upcoming&nbsp;ICS&nbsp;Conferences:
       </h1>
-      <div className="container grid grid-cols-1 lg:grid-cols-2">
+      <div className="container grid grid-cols-1 lg:grid-cols-2 lg:gap-8">
         {conferenceByYear.map((conferenceYear) => (
           <div className="mb-10">
             <h2 className="text-center text-[1.5rem] md:text-[1.7rem] mb-0 font-bold text-light_blue">
