@@ -1,4 +1,4 @@
-import { CiCircleCheck } from "react-icons/ci";
+import { BiSolidRightArrow } from "react-icons/bi";
 
 // TODO: Make 'advantages of card' clickable with effects
 // TODO: Make heading "Become a part of ICS"
@@ -36,14 +36,14 @@ const HomeCta = () => {
   ];
 
   return (
-    <section className="bg-dark_beige text-white p-3 lg:py-11">
+    <section className="bg-[url('/assets/images/advantages-bg.jpg')] bg-cover bg-bottom bg-fixed text-white p-3 lg:py-11">
       <div className="container">
-        <h2 className="text-center mb-3">Become a part of ICS</h2>
+        <h2 className="text-center mb-3 text-metal_gray">Become a part of ICS</h2>
         <div className="bg-off_white rounded-xl p-5 grid grid-cols-1 gap-3">
           {cta.map((c) => (
             <div>
-              <div className="flex text-dark_brown items-center justify-center mb-1 md:mb-2 text-xl md:text-3xl">
-                <CiCircleCheck className="mr-1" />
+              <div className="flex text-light_brown items-center justify-center mb-1 md:mb-2 text-xl md:text-3xl">
+                <BiSolidRightArrow className="mr-1 text-lg" />
                 <h3>{c.header}</h3>
               </div>
               {c.description.map((desc) => <p className="mb-1 text-center">{desc}</p>)}

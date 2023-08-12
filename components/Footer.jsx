@@ -43,6 +43,7 @@ const Footer = () => {
           Enquiry Form
         </Link>
       </div>
+      <small className="text-metal_gray italic absolute bottom-0 left-1/2 translate-x-[-50%] text-center">© Indigenous Conference Services 2023</small>
     </section>
   );
 };
