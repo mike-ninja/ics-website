@@ -8,10 +8,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // fontFamily: {
-      //   satoshi: ['Satoshi', 'sans-serif'],
-      //   inter: ['Inter', 'sans-serif'],
-      // },
       backgroundImage: {
         "nav_texture": "url('/assets/images/nav-texture.svg')",
         "header_bg": "url('/assets/images/header-bg.png')",

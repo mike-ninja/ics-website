@@ -17,12 +17,9 @@ section {
   @apply px-5 mx-auto md:px-10 lg:px-20 xl:px-44;
 }
 
-/* Table Style */
-
-
 /* Text Styles */
 h2 {
-  @apply text-4xl font-bold text-dark_brown tracking-tight uppercase;
+  @apply text-4xl font-bold tracking-tight uppercase;
 }
 
 h3 {
@@ -33,7 +30,7 @@ p {
   @apply text-justify text-metal_gray mb-4;
 }
 
-
+/* Buttons */
 .btn {
   @apply rounded inline-block text-white mt-4 px-6 py-1 transition-transform transform hover:scale-105 md:text-xl lg:text-2xl uppercase;
 }
@@ -44,10 +41,6 @@ p {
 
 .btn_variant {
   @apply border-2 border-transparent hover:border-white;
-}
-
-.btn_underline {
-  @apply border-b-2;
 }
 
 .btn_blue {
@@ -68,35 +61,14 @@ p {
   @apply text-dark_beige text-sm md:text-xl lg:text-2xl;
 }
 
+/* Advantages */
+.advantage_card {
+  @apply flex flex-col items-center bg-off_white py-10 rounded-xl transition-all hover:scale-[1.02] px-2 h-64 shadow-lg;
+}
+
 /* Markdown Style */
 .markdown {
   @apply relative justify-center items-center flex-col py-6;
-}
-
-.markdown img {
-  @apply w-1/2 mx-auto rounded-md;
-}
-
-.markdown h2 {
-  @apply pb-4 pt-3 text-2xl font-bold;
-}
-
-.markdown p {
-  @apply text-justify pb-5;
-}
-
-.app {
-  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
-}
-
-/* Conferences Card */
-.date_wrapper {
-  /* @apply relative w-9 h-[10rem] md:h-[7.8rem]; */
-  @apply text-lg;
-}
-
-.date_flipped {
-  /* @apply uppercase rounded transform rotate-[270deg] absolute top-1/2 translate-y-[-50%] translate-x-[-2rem] md:translate-x-[-3rem] font-mono font-bold tracking-tighter text-4xl md:text-5xl; */
 }
 
 /* .black_btn { */

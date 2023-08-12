@@ -10,12 +10,12 @@ const CallToAction = () => {
       <div className="container text-center text-light_blue">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           <div>
-            <div className="flex flex-col items-center bg-off_white py-10 rounded-xl transition-all hover:scale-[1.02]">
+            <div className="advantage_card">
               <HiSpeakerphone className="text-4xl text-metal_gray mb-3" />
               <strong className="text-2xl">
                 Become a Speaker
               </strong>
-              <p className="italic text-metal_gray">
+              <p className="italic text-metal_gray text-center">
                 Share your passion through ICS
               </p>
             </div>
@@ -27,13 +27,13 @@ const CallToAction = () => {
             </a>
           </div>
           <div>
-            <div className="flex flex-col items-center bg-off_white py-10 rounded-xl transition-all hover:scale-[1.02]">
-              <PiMedalFill className="text-4xl text-metal_gray mb-3" />
+            <div className="advantage_card">
+              <RiPresentationFill className="text-4xl text-metal_gray mb-3" />
               <strong className="text-2xl">
-                Become a Sponsor
+                Become an&nbsp;Exhibitor
               </strong>
-              <p className="italic text-metal_gray">
-                Partner with us at ICS
+              <p className="italic text-metal_gray text-center">
+                Connect, Engage, & Exhibit at ICS
               </p>
             </div>
             <a
@@ -44,13 +44,13 @@ const CallToAction = () => {
             </a>
           </div>
           <div>
-            <div className="flex flex-col items-center bg-off_white py-10 rounded-xl transition-all hover:scale-[1.02]">
-              <RiPresentationFill className="text-4xl text-metal_gray mb-3" />
+            <div className="advantage_card">
+              <PiMedalFill className="text-4xl text-metal_gray mb-3" />
               <strong className="text-2xl">
-                Become a Exhibitor
+                Become a Sponsor
               </strong>
-              <p className="italic text-metal_gray">
-                Connect, Engage, & Exhibit at ICS
+              <p className="italic text-metal_gray text-center">
+                Partner with us at ICS
               </p>
             </div>
             <a

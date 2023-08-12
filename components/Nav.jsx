@@ -50,7 +50,7 @@ const Nav = () => {
             </li>
           </Link>
           <div className="w-1 bg-white my-2 rounded"></div>
-          <Link href="/conference">
+          <Link href="/conferences">
             <li className="nav_item">
               Conferences
             </li>

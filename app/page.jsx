@@ -8,8 +8,8 @@ export default async function Home() {
   return (
     <>
       <Header />
-      <HomeAbout />
       <Conferences />
+      <HomeAbout />
       <Advantages />
       <CallToAction />
     </>

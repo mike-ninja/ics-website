@@ -37,7 +37,7 @@ const HomeAbout = () => {
           </div>
         </div>
         <div className="m-6 rounded">
-          <div className="h-[400px] flex bg-dark_beige rounded">
+          <div className="h-[400px] flex bg-dark_beige rounded translate-x-[0.5rem] translate-y-[0.5rem]">
             <div className="bg-[url('/assets/images/about-img.jpg')] bg-cover bg-center rounded w-full h-full translate-x-[-1rem] translate-y-[-1rem]">
             </div>
           </div>

@@ -11,8 +11,8 @@ const Footer = () => {
       <div className="hidden md:block h-[250px] w-[250px] lg:h-[450px] lg:w-[450px] absolute bottom-0 right-0">
         <Image src={Circle} width={450} height={450} alt="ics-conferences" />
       </div>
-      <div className="container z-10">
-        <h2 className="text-dark_brown lg:text-[3rem] lg:mb-2">Contact Us</h2>
+      <div className="container">
+        <h2 className="text-dark_brown">Contact Us</h2>
         <h3 className="text-light_brown mb-4 lg:text-3xl">
           Indigenous Conference Services
         </h3>
