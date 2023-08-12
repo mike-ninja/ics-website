@@ -5,10 +5,10 @@ import Advantages from "@/components/home/Advantages";
 import CallToAction from "@/components/home/CallToAction";
 
 export default async function Home() {
+  // <Conferences />;
   return (
     <>
       <Header />
-      <Conferences />
       <HomeAbout />
       <Advantages />
       <CallToAction />
