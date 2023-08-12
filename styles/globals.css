@@ -46,6 +46,10 @@ p {
   @apply border-2 border-transparent hover:border-white;
 }
 
+.btn_underline {
+  @apply border-b-2;
+}
+
 .btn_blue {
   @apply bg-light_blue border-2 border-light_blue;
 }
