@@ -11,7 +11,7 @@ const Conferences = async () => {
   return (
     <section id="conferences" className="relative">
       <h2 className="text-center text-light_brown">
-        Upcoming ICS Conferences
+        Upcoming Events
       </h2>
       <div className="container grid grid-cols-1 lg:grid-cols-2 lg:gap-8">
         {conferenceByYear.map((conferenceYear) => (

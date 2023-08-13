@@ -38,7 +38,7 @@ const HomeCta = () => {
   return (
     <section className="bg-[url('/assets/images/advantages-bg.jpg')] bg-cover bg-bottom bg-fixed text-white p-3 lg:py-11">
       <div className="container">
-        <h2 className="text-center text-metal_gray mb-4">Become a part of ICS</h2>
+        <h2 className="flex justify-center text-metal_gray mb-4">Become&nbsp;part&nbsp;of&nbsp;ICS</h2>
         <div className="bg-off_white rounded-xl p-5 grid grid-cols-1 gap-3 shadow">
           {cta.map((c) => (
             <div>
