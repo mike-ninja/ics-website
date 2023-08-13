@@ -12,9 +12,9 @@ const ToGetStarted = () => {
 
 const Header = () => {
   return (
-    <header className="bg-header_bg relative bg-cover bg-center h-[60vh] min-h-[600px] lg:h-[80vh] flex flex-col justify-center items-center">
+    <header className="bg-home_header_bg relative bg-cover bg-center h-[60vh] min-h-[600px] lg:h-[80vh] flex flex-col justify-center items-center">
       <div className="w-fit p-4">
-        <div className="text-center bg-white rounded-md p-2 md:p-5 lg:p-7">
+        <div className="header_box">
           <h1 className="header_head">
             INDIGENOUS&nbsp;CONFERENCE&nbsp;SERVICES
           </h1>

@@ -57,6 +57,10 @@ p {
   @apply font-extrabold text-dark_beige text-lg md:text-4xl lg:text-5xl;
 }
 
+.header_box {
+  @apply text-center bg-white rounded-md p-2 md:p-5 lg:p-7;
+}
+
 .header_description {
   @apply text-dark_beige text-sm md:text-xl lg:text-2xl;
 }
