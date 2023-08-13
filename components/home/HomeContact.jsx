@@ -3,9 +3,7 @@ import Image from "next/image";
 import { BiSolidRightArrow } from "react-icons/bi";
 import Circle from "@/public/assets/images/circle.svg";
 
-// TODO: Hover effect for email and telephone
-
-const Footer = () => {
+const HomeContact = () => {
   return (
     <section className="relative lg:py-28">
       <div className="hidden md:block h-[250px] w-[250px] lg:h-[450px] lg:w-[450px] absolute bottom-0 right-0">
@@ -18,7 +16,7 @@ const Footer = () => {
         </h3>
         <div className="text-dark_brown flex items-center md:text-xl lg:text-2xl md:mb-2 lg:mb-3">
           <BiSolidRightArrow className="mr-2" />
-          <span>
+          <span className="transition-all hover:scale-105">
             Email:&nbsp;
             <a
               href="mailto:adminics@iinet.net.au"
@@ -32,7 +30,7 @@ const Footer = () => {
         </div>
         <div className="text-dark_brown flex items-center md:text-xl lg:text-2xl md:mb-2 lg:mb-3">
           <BiSolidRightArrow className="mr-2" />
-          <span>
+          <span className="transition-all hover:scale-105">
             Tel:&nbsp;
             <a href="tel:+6141942803" className="font-bold">
               (07) 4194 2803
@@ -48,4 +46,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default HomeContact;
