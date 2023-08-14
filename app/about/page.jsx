@@ -1,21 +1,25 @@
 import AboutHeader from "@/components/about/AboutHeader";
-import { BiSolidRightArrow } from "react-icons/bi";
+import Highlights from "@/components/about/Highlights";
 
 const page = () => {
   return (
     <>
       <AboutHeader />
-      <section className="bg-light_beige">
-        <div className="container">
-          <h2 className="text-light_blue">About ICS</h2>
-          <div className="flex text-metal_gray items-center mb-3">
-            <BiSolidRightArrow />
-            <h3>
-              Indigenous Conference Services
-            </h3>
-          </div>
-          <div className="flex flex-wrap">
+      <section>
+        <h2 className="text-center text-5xl">About ICS</h2>
+        <h3 className="text-center mb-8 text-3xl italic font-thin">Building better future together</h3>
+        <div className="container grid grid-cols-1 gap-12">
+          <div className="grid grid-cols-2 gap-12">
             <div>
+              <h2>Our Vision</h2>
+              <p>
+                ICS is by far the longest, professional, independent (not
+                relying on government funding) event management company in First
+                Nations Australia. We are proud of our heritage which when
+                coupled with our unyielding drive and determination, we
+                generally achieved and obtain the highest standard of
+                professional event management service.
+              </p>
               <p>
                 The absolute core and soul of our company is our people and
                 culture. We believe that the people who make up ICS have a
@@ -23,24 +27,24 @@ const page = () => {
                 and experiences. Over the years, we have built the most
                 experienced Indigenous Conference Management team so much so
                 that since opening our doors, we have clocked up an impressive
-                array of events both within Australia and internationally. ICS
-                has organized conferences up to 6,500 delegates, festivals up to
-                70,000 over two (2) days and thousands of smaller conferences
-                and events. We offer community organizations a wide range of
-                services from total event management to marketing, offering
-                perks and free of charge services for sourcing conference venues
-                amongst others.
+                array of events both within Australia and internationally.
               </p>
-              <p>
-                ICS is based upon the principles of maintaining our own Cultural
-                identity whilst striving for our own self-determination through
-                education & private enterprise. ICS is by far the longest,
-                professional, independent (not relying on government funding)
-                event management company in First Nations Australia. We are
-                proud of our heritage which when coupled with our unyielding
-                drive and determination, we generally achieved and obtain the
-                highest standard of professional event management service.
-              </p>
+              <Highlights text={"100% Indigenous-owned"} />
+              <Highlights text={"Based on principles of maintaining cultural identity"} />
+              <Highlights text={"Independent from any government-funding body"} />
+            </div>
+            <div className="h-[500px] bg-dark_beige rounded translate-x-[0.5rem] translate-y-[0.5rem]">
+              <div className="bg-[url('/assets/images/about-img.jpg')] bg-cover bg-center rounded w-full h-full translate-x-[-1rem] translate-y-[-1rem]">
+              </div>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-12">
+            <div className="h-[500px] bg-dark_beige rounded translate-x-[0.5rem] translate-y-[0.5rem]">
+              <div className="bg-[url('/assets/images/about-img.jpg')] bg-cover bg-center rounded w-full h-full translate-x-[-1rem] translate-y-[-1rem]">
+              </div>
+            </div>
+            <div>
+              <h2>Our Purpose</h2>
               <p>
                 We believe education is the key to generational change and a
                 brighter future, and we are deeply committed to the ongoing
@@ -56,6 +60,12 @@ const page = () => {
                 public interest and have deep grounding with grassroots
                 principles.
               </p>
+              <Highlights text={"Striving for self-determination by education & private enterprise"} />
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-12 items-center">
+            <div>
+              <h2>Our Values</h2>
               <p>
                 Our Koori CEO, Tom Callaghan comes from Kempsey in Dunghutti
                 country of NSW. We specialize in working with NGOs and
@@ -93,19 +103,12 @@ const page = () => {
                 and more efficient than for workers to have an opportunity to
                 network and meet face to face to exchange ideas, valuable
                 information and successful programs in place in their
-                communities. For more information, please do not hesitate to
-                contact us anytime.
+                communities.
               </p>
             </div>
-            <div className="m-6 rounded w-1/2 ml-4 float-right">
-              <div className="h-[400px] flex bg-dark_beige rounded translate-x-[0.5rem] translate-y-[0.5rem]">
-                <div className="bg-[url('/assets/images/ics-about.jpg')] bg-cover bg-top rounded w-full h-full translate-x-[-1rem] translate-y-[-1rem]">
-                </div>
+            <div className="h-[500px] bg-dark_beige rounded translate-x-[0.5rem] translate-y-[0.5rem]">
+              <div className="bg-[url('/assets/images/about-img.jpg')] bg-cover bg-center rounded w-full h-full translate-x-[-1rem] translate-y-[-1rem]">
               </div>
-              <span className="text-white bg-dark_beige text-sm mt-4 inline-block p-1 rounded">
-                ICS is 100% Indigenous-owned and independent from any
-                government-funding body!
-              </span>
             </div>
           </div>
         </div>
