@@ -17,10 +17,9 @@ module.exports = {
       },
       colors: {
         "transparent_brown": "#884A2CCC",
-        // 'dark_brown': '#884A2C',
         "dark_brown": "#4D0B05",
         "light_brown": "#D67229",
-        // 'light_brown': '#EB4833',
+        "transparent_orange": "#D67229CC",
         "dark_beige": "#EBC284",
         "light_beige": "#FAF0E4",
         "light_blue": "#5AD4EF",
