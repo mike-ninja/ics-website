@@ -3,7 +3,7 @@ import Conferences from "@/components/home/Conferences";
 import HomeAbout from "@/components/home/HomeAbout";
 import Advantages from "@/components/home/Advantages";
 import CallToAction from "@/components/home/CallToAction";
-import HomeContact from "@/components/home/HomeContact";
+import FooterContact from "@/components/FooterContact";
 
 export default async function Home() {
   return (
@@ -13,7 +13,7 @@ export default async function Home() {
       <HomeAbout />
       <Advantages />
       <CallToAction />
-      <HomeContact />
+      <FooterContact />
     </>
   );
 }

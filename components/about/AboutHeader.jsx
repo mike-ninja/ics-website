@@ -1,3 +1,4 @@
+import DividerDots from "../DividerDots";
 import HeaderBox from "../HeaderBox";
 import ToGetStarted from "../ToGetStarted";
 

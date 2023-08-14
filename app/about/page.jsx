@@ -1,7 +1,7 @@
+import FooterContact from "@/components/FooterContact";
 import GuideBox from "@/components/GuideBox";
 import AboutHeader from "@/components/about/AboutHeader";
 import Highlights from "@/components/about/Highlights";
-import HomeContact from "@/components/home/HomeContact";
 
 const page = () => {
   return (
@@ -150,7 +150,7 @@ const page = () => {
           textLink="contact us"
         />
       </section>
-      <HomeContact />
+      <FooterContact />
     </>
   );
 };

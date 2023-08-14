@@ -3,7 +3,7 @@ import Image from "next/image";
 import { BiSolidRightArrow } from "react-icons/bi";
 import Circle from "@/public/assets/images/circle.svg";
 
-const HomeContact = () => {
+const FooterContact = () => {
   return (
     <section className="relative lg:py-28">
       <div className="hidden md:block h-[250px] w-[250px] lg:h-[450px] lg:w-[450px] absolute bottom-0 right-0">
@@ -41,9 +41,11 @@ const HomeContact = () => {
           Enquiry Form
         </Link>
       </div>
-      <small className="text-metal_gray italic absolute bottom-0 left-1/2 translate-x-[-50%] text-center">© Indigenous Conference Services 2023</small>
+      <small className="text-metal_gray italic absolute bottom-0 left-1/2 translate-x-[-50%] text-center">
+        © Indigenous Conference Services 2023
+      </small>
     </section>
   );
 };
 
-export default HomeContact;
+export default FooterContact;
