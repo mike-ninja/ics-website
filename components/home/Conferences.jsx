@@ -7,7 +7,6 @@ const Conferences = async () => {
   const conferences = await conferencesService.getConferences();
   const conferenceByYear = groupFunctionByYear(conferences);
 
-  // <h1 className="text-center text-[1.6rem] md:text-3xl lg:text-4xl mb-2 md:mb-4 lg:mb-12 uppercase text-light_brown font-semibold">
   return (
     <section id="conferences" className="relative">
       <h2 className="text-center text-light_brown">

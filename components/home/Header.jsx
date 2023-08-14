@@ -1,27 +1,12 @@
-import { BiSolidDownArrow } from "react-icons/bi";
 import Link from "next/link";
-
-const ToGetStarted = () => {
-  return (
-    <a href="#conferences" className="text-white text-sm lg:text-[22px] absolute bottom-0 mb-3 transition-all hover:scale-105">
-      <span>To get started, check information below</span>
-      <BiSolidDownArrow className="mx-auto"/>
-    </a>
-  );
-};
+import HeaderBox from "../HeaderBox";
+import ToGetStarted from "../ToGetStarted";
 
 const Header = () => {
   return (
     <header className="bg-home_header_bg relative bg-cover bg-center h-[60vh] min-h-[600px] lg:h-[80vh] flex flex-col justify-center items-center">
       <div className="w-fit p-4">
-        <div className="header_box">
-          <h1 className="header_head">
-            INDIGENOUS&nbsp;CONFERENCE&nbsp;SERVICES
-          </h1>
-          <h2 className="header_description">
-            THE IMPOSSIBLE IS JUST THE NEXT STEP FOR US IN OUR JOURNEY
-          </h2>
-        </div>
+        <HeaderBox />
         <div className="flex text-white justify-center">
           <Link
             className="btn btn_primary md:mr-2 lg:mr-5"
@@ -41,7 +26,7 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      <ToGetStarted />
+      <ToGetStarted text="To get started, check information below" goto="#conferences" />
     </header>
   );
 };
