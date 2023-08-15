@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { BiSolidRightArrow } from "react-icons/bi";
+import AboutImg from "@/public/assets/images/about-img.jpg";
+import ImageFrame from "../ImageFrame";
 
 const HomeAbout = () => {
   return (
@@ -36,12 +38,7 @@ const HomeAbout = () => {
             </div>
           </div>
         </div>
-        <div className="m-6 rounded">
-          <div className="h-[400px] flex bg-dark_beige rounded translate-x-[0.5rem] translate-y-[0.5rem]">
-            <div className="bg-[url('/assets/images/about-img.jpg')] bg-cover bg-center rounded w-full h-full translate-x-[-1rem] translate-y-[-1rem]">
-            </div>
-          </div>
-        </div>
+        <ImageFrame img={AboutImg} />
       </div>
     </section>
   );
