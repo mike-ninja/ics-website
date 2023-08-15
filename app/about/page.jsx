@@ -83,7 +83,7 @@ const page = () => {
             img={AboutImgTwo}
             alt="Conferences Services Australia"
             position="50% 5%"
-            bg="#545454"
+            bg="#dde4ea"
           />
           <div>
             <h2 className="text-metal_gray mb-3">Our Purpose</h2>

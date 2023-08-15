@@ -1,54 +1,8 @@
-"use client";
-
-// import Link from "next/link";
-// import { BiSolidRightArrow } from "react-icons/bi";
-// import { BiSolidDownArrow } from "react-icons/bi";
-// import { useState } from "react";
 import dayjs from "dayjs";
 
 const localizedFormat = require("dayjs/plugin/localizedFormat");
 dayjs.extend(localizedFormat);
 
-// const Speakers = ({ speakers }) => {
-//   const [showSpeakers, setShowSpeakers] = useState(false);
-//   return (
-//     <div className="text-dark_brown">
-//       <div
-//         onClick={() => setShowSpeakers((prev) => !prev)}
-//         className="inline-flex items-center"
-//       >
-//         <div className="mb-1 mr-1">
-//           <BiSolidRightArrow
-//             className="overflow-hidden transition-all ease-in duration-400"
-//             style={{
-//               height: showSpeakers ? "0" : "auto",
-//               opacity: showSpeakers ? "0" : "1",
-//             }}
-//           />
-//           <BiSolidDownArrow
-//             className="overflow-hidden transition-all ease-in duration-400"
-//             style={{
-//               height: showSpeakers ? "auto" : "0",
-//               opacity: showSpeakers ? "1" : "0",
-//             }}
-//           />
-//         </div>
-//         <div className="align-middle">Speakers</div>
-//       </div>
-//       <div
-//         className="overflow-hidden transition-all ease-linear duration-400"
-//         style={{
-//           height: showSpeakers ? "auto" : "0",
-//           opacity: showSpeakers ? "1" : "0",
-//         }}
-//       >
-//         {speakers.map((speaker) => (
-//           <div className="capitalize">{speaker.title}</div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
 
 const Conference = ({ conference }) => {
   return (
