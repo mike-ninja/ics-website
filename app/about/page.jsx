@@ -1,7 +1,9 @@
 import FooterContact from "@/components/FooterContact";
 import GuideBox from "@/components/GuideBox";
+import ImageFrame from "@/components/ImageFrame";
 import AboutHeader from "@/components/about/AboutHeader";
 import Highlights from "@/components/about/Highlights";
+import AboutImgOne from "@/public/assets/images/ics-about.jpg";
 
 const page = () => {
   return (
@@ -50,10 +52,10 @@ const page = () => {
                 SEE UPCOMING CONFERENCES
               </a>
             </div>
-            <div className="h-[500px] bg-dark_beige rounded translate-x-[0.5rem] translate-y-[0.5rem]">
-              <div className="bg-[url('/assets/images/about-img.jpg')] bg-cover bg-center rounded w-full h-full translate-x-[-1rem] translate-y-[-1rem]">
-              </div>
-            </div>
+            <ImageFrame
+              img={AboutImgOne}
+              alt="Conferences Services Australia"
+            />
           </div>
         </div>
       </section>

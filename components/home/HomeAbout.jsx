@@ -38,7 +38,7 @@ const HomeAbout = () => {
             </div>
           </div>
         </div>
-        <ImageFrame img={AboutImg} />
+        <ImageFrame img={AboutImg} alt="Indigenous Conference Services" />
       </div>
     </section>
   );
