@@ -3,15 +3,17 @@ import GuideBox from "@/components/GuideBox";
 import ImageFrame from "@/components/ImageFrame";
 import AboutHeader from "@/components/about/AboutHeader";
 import Highlights from "@/components/about/Highlights";
-import AboutImgOne from "@/public/assets/images/ics-about.jpg";
+import AboutImgOne from "@/public/assets/images/tom-liza.jpg";
+import AboutImgTwo from "@/public/assets/images/hand-painting.jpg";
+import AboutImgThree from "@/public/assets/images/charter.jpg";
 
 const page = () => {
   return (
     <>
       <AboutHeader />
       <section id="about">
-        <h2 className="text-center text-5xl">About ICS</h2>
-        <h3 className="text-center mb-8 text-3xl italic font-thin">
+        <h2 className="text-center text-5xl text-dark_beige">About ICS</h2>
+        <h3 className="text-center mb-8 text-3xl italic font-thin text-dark_brown">
           Building better future together
         </h3>
       </section>
@@ -19,7 +21,7 @@ const page = () => {
         <div className="container grid grid-cols-1 gap-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h2>Our Vision</h2>
+              <h2 className="text-dark_beige mb-3">Our Vision</h2>
               <p>
                 ICS is by far the longest, professional, independent (not
                 relying on government funding) event management company in First
@@ -55,13 +57,15 @@ const page = () => {
             <ImageFrame
               img={AboutImgOne}
               alt="Conferences Services Australia"
+              position="50% 15%"
+              bg="#EBC284"
             />
           </div>
         </div>
       </section>
       <section>
-        <div className="container grid grid-cols-1 gap-3">
-          <div className="bg-light_beige py-6">
+        <div className="container">
+          <div className="bg-light_beige py-12 rounded-xl grid grid-cols-1 gap-1">
             <Highlights text={"100% Indigenous-owned"} />
             <Highlights text={"Independent from any government-funding body"} />
             <Highlights
@@ -75,12 +79,14 @@ const page = () => {
       </section>
       <section>
         <div className="container grid grid-cols-2 gap-12">
-          <div className="h-[500px] bg-dark_beige rounded translate-x-[0.5rem] translate-y-[0.5rem]">
-            <div className="bg-[url('/assets/images/about-img.jpg')] bg-cover bg-center rounded w-full h-full translate-x-[-1rem] translate-y-[-1rem]">
-            </div>
-          </div>
+          <ImageFrame
+            img={AboutImgTwo}
+            alt="Conferences Services Australia"
+            position="50% 5%"
+            bg="#545454"
+          />
           <div>
-            <h2>Our Purpose</h2>
+            <h2 className="text-metal_gray mb-3">Our Purpose</h2>
             <p>
               We believe education is the key to generational change and a
               brighter future, and we are deeply committed to the ongoing
@@ -101,7 +107,7 @@ const page = () => {
       <section className="relative">
         <div className="container grid grid-cols-2 gap-12 items-center">
           <div>
-            <h2>Our Values</h2>
+            <h2 className="text-light_blue mb-3">Our Values</h2>
             <p>
               Our Koori CEO, Tom Callaghan comes from Kempsey in Dunghutti
               country of NSW. We specialize in working with NGOs and governments
@@ -141,10 +147,12 @@ const page = () => {
               successful programs in place in their communities.
             </p>
           </div>
-          <div className="h-[500px] bg-dark_beige rounded translate-x-[0.5rem] translate-y-[0.5rem]">
-            <div className="bg-[url('/assets/images/about-img.jpg')] bg-cover bg-center rounded w-full h-full translate-x-[-1rem] translate-y-[-1rem]">
-            </div>
-          </div>
+          <ImageFrame
+            img={AboutImgThree}
+            alt="Conferences Services Australia"
+            position="50% 50%"
+            bg="#5AD4EF"
+          />
         </div>
         <GuideBox
           text="If you have any questions,"
