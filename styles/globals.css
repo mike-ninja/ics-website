@@ -52,19 +52,6 @@ p {
   @apply transition-all px-5 h-full hover:bg-dark_brown text-white font-semibold text-xl tracking-wider flex justify-center items-center uppercase;
 }
 
-/* Header */
-.header_head {
-  @apply font-extrabold text-dark_beige text-lg md:text-4xl lg:text-5xl;
-}
-
-.header_box {
-  @apply text-center bg-white rounded-md p-2 md:p-5 lg:p-7;
-}
-
-.header_description {
-  @apply text-dark_beige text-sm md:text-xl lg:text-2xl;
-}
-
 /* Advantages */
 .advantage_card {
   @apply flex flex-col items-center bg-off_white py-10 rounded-xl transition-all hover:scale-[1.02] px-2 h-64 shadow-lg;

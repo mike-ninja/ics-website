@@ -11,8 +11,7 @@ module.exports = {
       backgroundImage: {
         "nav_texture": "url('/assets/images/nav-texture.svg')",
         "home_header_bg": "url('/assets/images/header-bg.png')",
-        "about_header_bg": "url('/assets/images/uluru-header.jpg')",
-        "contact_header_bg": "url('/assets/images/contact-header.jpg')",
+        "secondary_header_bg": "url('/assets/images/advantages-bg.jpg')",
         "conferences_header_bg": "url('/assets/images/advantages-bg.jpg')",
         "divider_dots": "url('/assets/images/divider-dots.svg')",
         "contact_us": "url('/assets/images/contact-us.jpg')",

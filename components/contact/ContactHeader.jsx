@@ -1,6 +1,8 @@
 import HeaderBox from "../HeaderBox";
 import ToGetStarted from "../ToGetStarted";
 
+// NOT USED
+
 const ContactHeader = () => {
   return (
     <header className="bg-contact_header_bg relative bg-cover bg-fixed h-[60vh] min-h-[600px] lg:h-[80vh] flex flex-col justify-center items-center">

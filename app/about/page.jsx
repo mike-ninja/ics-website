@@ -1,16 +1,16 @@
 import FooterContact from "@/components/FooterContact";
 import GuideBox from "@/components/GuideBox";
 import ImageFrame from "@/components/ImageFrame";
-import AboutHeader from "@/components/about/AboutHeader";
 import Highlights from "@/components/about/Highlights";
 import AboutImgOne from "@/public/assets/images/tom-liza.jpg";
 import AboutImgTwo from "@/public/assets/images/hand-painting.jpg";
 import AboutImgThree from "@/public/assets/images/charter.jpg";
+import SecondaryHeader from "@/components/SecondaryHeader";
 
 const page = () => {
   return (
     <>
-      <AboutHeader />
+      <SecondaryHeader text="Check more information below" goto="#about" />
       <section id="about">
         <h2 className="text-center text-5xl text-dark_beige">About ICS</h2>
         <h3 className="text-center mb-8 text-3xl italic font-thin text-dark_brown">

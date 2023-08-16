@@ -6,6 +6,7 @@ import { BiSolidRightArrow } from "react-icons/bi";
 import Image from "next/image";
 import emailjs from "emailjs-com";
 import ContactUs from "@/public/assets/images/contact-us.jpg";
+import SecondaryHeader from "@/components/SecondaryHeader";
 
 const page = () => {
   const [nofication, setNotification] = useState("");
@@ -34,7 +35,10 @@ const page = () => {
 
   return (
     <>
-      <ContactHeader />
+      <SecondaryHeader
+        text="Reach out by contacting us below"
+        goto="#contact"
+      />
       <section id="contact">
         <div className="container grid grid-cols-1 gap-6 md:grid-cols-2">
           <div className="grid grid-cols-1 gap-12">
