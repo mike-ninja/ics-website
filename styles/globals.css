@@ -49,7 +49,7 @@ p {
 
 /* Navbar */
 .nav_item {
-  @apply transition-all px-5 h-full hover:bg-dark_brown text-white font-semibold text-xl tracking-wider flex justify-center items-center uppercase;
+  @apply transition-all px-3 lg:px-5 h-full hover:bg-dark_brown text-white font-semibold text-lg lg:text-xl tracking-wider flex justify-center items-center uppercase;
 }
 
 /* Advantages */

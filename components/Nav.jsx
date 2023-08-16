@@ -33,7 +33,7 @@ const Nav = () => {
   ];
 
   return (
-    <nav className="bg-nav_texture w-full h-16 flex justify-between items-center text-black">
+    <nav className="bg-nav_texture w-full h-14 lg:h-16 flex justify-between items-center">
       <Link href="/">
         <Image
           src={Logo}

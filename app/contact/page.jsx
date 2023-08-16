@@ -1,6 +1,5 @@
 "use client";
 
-import ContactHeader from "@/components/contact/ContactHeader";
 import { useRef, useState } from "react";
 import { BiSolidRightArrow } from "react-icons/bi";
 import Image from "next/image";

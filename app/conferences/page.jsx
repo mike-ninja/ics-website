@@ -1,7 +1,7 @@
 import ConferenceCard from "@/components/ConferenceCard";
-import ConferencesHeader from "@/components/conferences/ConferencesHeader";
 import conferencesService from "@/services/conferences";
 import groupFunctionByYear from "@/utils/groupConferenceByYear";
+import SecondaryHeader from "@/components/SecondaryHeader";
 
 const page = async () => {
   const conferences = await conferencesService.getConferences();
@@ -9,8 +9,8 @@ const page = async () => {
 
   return (
     <>
-      <ConferencesHeader />
-      <section>
+      <SecondaryHeader text="Check more information below" goto="#conferences" />
+      <section id="conferences">
         <div className="container">
           <h2 className="text-center text-5xl text-dark_beige">
             UPCOMING EVENTS
