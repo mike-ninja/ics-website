@@ -45,6 +45,12 @@ const Nav = () => {
       </Link>
       <div className="hidden sm:flex bg-transparent_brown h-full">
         <ul className="hidden sm:flex">
+          <Link href="/">
+            <li className="nav_item">
+              Home
+            </li>
+          </Link>
+          <div className="w-1 bg-white my-2 rounded"></div>
           <Link href="/about">
             <li className="nav_item">
               About

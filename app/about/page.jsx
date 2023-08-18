@@ -6,6 +6,7 @@ import AboutImgOne from "@/public/assets/images/tom-liza.jpg";
 import AboutImgTwo from "@/public/assets/images/hand-painting.jpg";
 import AboutImgThree from "@/public/assets/images/charter.jpg";
 import SecondaryHeader from "@/components/SecondaryHeader";
+import Image from "next/image";
 
 const page = () => {
   return (
@@ -21,9 +22,11 @@ const page = () => {
               Building better future together
             </h3>
           </div>
-          <div className="container grid grid-cols-1 md:grid-cols-2 gap-2">
+          <div className="container grid grid-cols-1 lg:grid-cols-2 gap-2">
             <div>
-              <h2 className="text-dark_beige text-3xl md:text-4xl lg:text-5xl mb-1 lg:mb-3">Our Vision</h2>
+              <h2 className="text-dark_beige text-3xl md:text-4xl lg:text-5xl mb-1 lg:mb-3">
+                Our Vision
+              </h2>
               <p>
                 ICS is by far the longest, professional, independent (not
                 relying on government funding) event management company in First
@@ -81,7 +84,7 @@ const page = () => {
           </div>
         </section>
         <section className="relative grid grid-cols-1 md:gap-8 lg:gap-16">
-          <div className="container grid grid-cols-1 md:grid-cols-2 gap-2">
+          <div className="container grid grid-cols-1 lg:grid-cols-2 gap-2">
             <ImageFrame
               img={AboutImgTwo}
               alt="Conferences Services Australia"
@@ -89,7 +92,9 @@ const page = () => {
               bg="#dde4ea"
             />
             <div>
-              <h2 className="text-metal_gray text-3xl md:text-4xl lg:text-5xl mb-1 lg:mb-3">Our Purpose</h2>
+              <h2 className="text-metal_gray text-3xl md:text-4xl lg:text-5xl mb-1 lg:mb-3">
+                Our Purpose
+              </h2>
               <p>
                 We believe education is the key to generational change and a
                 brighter future, and we are deeply committed to the ongoing
@@ -107,9 +112,11 @@ const page = () => {
               </p>
             </div>
           </div>
-          <div className="container grid grid-cols-1 md:grid-cols-2 gap-2 items-center">
+          <div className="container grid grid-cols-1 lg:grid-cols-2 gap-2 items-center">
             <div>
-              <h2 className="text-light_blue text-3xl md:text-4xl lg:text-5xl mb-1 lg:mb-3">Our Values</h2>
+              <h2 className="text-light_blue text-3xl md:text-4xl lg:text-5xl mb-1 lg:mb-3">
+                Our Values
+              </h2>
               <p>
                 Our Koori CEO, Tom Callaghan comes from Kempsey in Dunghutti
                 country of NSW. We specialize in working with NGOs and

@@ -39,7 +39,7 @@ const page = () => {
         goto="#contact"
       />
       <section id="contact">
-        <div className="container grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="container grid grid-cols-1 gap-6 lg:grid-cols-2">
           <div className="grid grid-cols-1 gap-12">
             <div>
               <h2 className="text-dark_brown">Contact Us</h2>
@@ -77,7 +77,7 @@ const page = () => {
                 onSubmit={sendEmail}
                 className="grid grid-cols-1 md:grid-cols-2 gap-1"
               >
-                <div className="grid grid-cols-1 gap-3">
+                <div className="grid grid-cols-1 gap-1 md:gap-3">
                   <input
                     type="text"
                     name="name"

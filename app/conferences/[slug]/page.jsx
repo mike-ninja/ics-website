@@ -14,6 +14,8 @@ const page = async ({ params }) => {
   const { post, markdown } = await conferencesService.getConference(
     params.slug,
   );
+
+  console.log(markdown.parent)
   return (
     <>
       <div className="container markdown">
