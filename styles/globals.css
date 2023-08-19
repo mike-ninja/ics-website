@@ -58,8 +58,8 @@ p {
 }
 
 /* Markdown Style */
-.markdown {
-  @apply relative justify-center items-center flex-col py-6;
+.markdown h2 {
+  @apply mb-2;
 }
 
 table {
