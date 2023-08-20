@@ -70,7 +70,10 @@ const Nav = () => {
           </Link>
         </ul>
       </div>
-      <div onClick={handleNav} className="sm:hidden cursor-pointer bg-transparent_brown h-full flex items-center px-3 text-white">
+      <div
+        onClick={handleNav}
+        className="sm:hidden cursor-pointer bg-transparent_brown h-full flex items-center px-3 text-white"
+      >
         <AiOutlineMenu size={25} />
       </div>
       <div
@@ -87,6 +90,7 @@ const Nav = () => {
           <ul>
             {navItems.map((item) => (
               <Link
+                key={item.text}
                 href={item.link}
               >
                 <li

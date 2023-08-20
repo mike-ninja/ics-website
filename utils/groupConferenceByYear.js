@@ -1,3 +1,5 @@
+import groupFunctionByMonth from "./groupConferenceByMonth";
+
 const groupFunctionByYear = (conferences) => {
   let conferencesByYear = [];
 
@@ -8,15 +10,16 @@ const groupFunctionByYear = (conferences) => {
     );
 
     if (!foundYear) {
+      groupFunctionByMonth([], conference);
       const newYear = {
         year: startYear,
-        conferences: [{ ...conference }],
+        conferences: groupFunctionByMonth([], conference),
       };
       conferencesByYear = conferencesByYear.concat(newYear);
     } else {
       const updatedYear = {
         ...foundYear,
-        conferences: foundYear.conferences.concat(conference),
+        conferences: groupFunctionByMonth(foundYear.conferences, conference),
       };
       conferencesByYear = conferencesByYear.map((conferenceYear) =>
         conferenceYear.year === startYear ? updatedYear : conferenceYear

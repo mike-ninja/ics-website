@@ -3,6 +3,18 @@ import Conference from "./Conference";
 import groupFunctionByYear from "@/utils/groupConferenceByYear";
 import DividerDots from "../DividerDots";
 
+const ConferenceByMonth = (conferenceMonth) => {
+  const month = conferenceMonth.conferenceMonth;
+  return (
+    <div>
+      <h2 className="text-center italic font-thin capitalize text-2xl">{month.month}</h2>
+      {month.conferences.map((conference) => (
+        <Conference conference={conference} />
+      ))}
+    </div>
+  );
+};
+
 const Conferences = async () => {
   const conferences = await conferencesService.getConferences();
   const conferenceByYear = groupFunctionByYear(conferences);
@@ -12,15 +24,17 @@ const Conferences = async () => {
       <h2 className="text-center text-light_brown">
         Upcoming Events
       </h2>
-      <div className="container grid grid-cols-1 lg:grid-cols-2 lg:gap-8">
+      <div className="container grid grid-cols-1 lg:gap-8">
         {conferenceByYear.map((conferenceYear) => (
           <div className="mb-10">
             <h2 className="text-center text-[1.5rem] md:text-[1.7rem] mb-0 font-bold text-light_blue">
               {conferenceYear.year} Conferences
             </h2>
-            {conferenceYear.conferences.map((conference) => (
-              <Conference conference={conference} />
-            ))}
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+              {conferenceYear.conferences.map((conferenceMonth) => (
+                <ConferenceByMonth conferenceMonth={conferenceMonth} />
+              ))}
+            </div>
           </div>
         ))}
       </div>

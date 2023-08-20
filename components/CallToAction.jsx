@@ -16,7 +16,7 @@ const CallToAction = () => {
             <div className="advantage_card">
               <HiSpeakerphone className="text-4xl text-metal_gray mb-3" />
               <strong className="text-2xl">
-                Become a Speaker
+                Keynotes
               </strong>
               <p className="italic text-metal_gray text-center">
                 Share your passion through ICS
@@ -26,14 +26,14 @@ const CallToAction = () => {
               href=""
               className="border-b-[1px] border-metal_gray inline-block mt-4 transition-all hover:scale-105 text-2xl"
             >
-              <span className="text-metal_gray">Click Here</span>
+              <span className="text-metal_gray text-lg lg:text-2xl">Become a Speaker</span>
             </a>
           </div>
           <div>
             <div className="advantage_card">
               <RiPresentationFill className="text-4xl text-metal_gray mb-3" />
               <strong className="text-2xl">
-                Become an&nbsp;Exhibitor
+                Exhibitions
               </strong>
               <p className="italic text-metal_gray text-center">
                 Connect, Engage, & Exhibit at ICS
@@ -43,14 +43,14 @@ const CallToAction = () => {
               href=""
               className="border-b-[1px] border-metal_gray inline-block mt-4 transition-all hover:scale-105 text-2xl"
             >
-              <span className="text-metal_gray">Click Here</span>
+              <span className="text-metal_gray text-lg lg:text-2xl">Become an Exhibitor</span>
             </a>
           </div>
           <div>
             <div className="advantage_card">
               <PiMedalFill className="text-4xl text-metal_gray mb-3" />
               <strong className="text-2xl">
-                Become a Sponsor
+                Sponsorship
               </strong>
               <p className="italic text-metal_gray text-center">
                 Partner with us at ICS
@@ -60,7 +60,7 @@ const CallToAction = () => {
               href=""
               className="border-b-[1px] border-metal_gray inline-block mt-4 transition-all hover:scale-105 text-2xl"
             >
-              <span className="text-metal_gray">Click Here</span>
+              <span className="text-metal_gray text-lg lg:text-2xl">Become a Sponsor</span>
             </a>
           </div>
         </div>

@@ -43,6 +43,12 @@ const getConferences = React.cache(async () => {
         equals: true,
       },
     },
+    sorts: [
+      {
+        property: "Date",
+        direction: "ascending",
+      },
+    ],
   });
 
   return response.results.map((res) => {
