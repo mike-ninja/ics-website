@@ -1,8 +1,8 @@
 import dayjs from "dayjs";
+import Link from "next/link";
 
 const localizedFormat = require("dayjs/plugin/localizedFormat");
 dayjs.extend(localizedFormat);
-
 
 const Conference = ({ conference }) => {
   return (
@@ -15,11 +15,13 @@ const Conference = ({ conference }) => {
         </span>
       </div>
       <div className="flex-1 flex-col shadow-lg text-right rounded-lg py-2 pr-3 bg-light_beige">
-        <div className="text-light_brown font-semibold text-[1.2rem]">
-          {conference.title}
-        </div> 
-        <div className="text-metal_gray">{conference.hotel}</div>
-        <div className="text-metal_gray mt-2 capitalize">Read&nbsp;More</div>
+        <Link href={`/conferences/${conference.slug}`}>
+          <div className="text-light_brown font-semibold text-[1.2rem]">
+            {conference.title}
+          </div>
+          <div className="text-metal_gray">{conference.hotel}</div>
+          <div className="text-metal_gray mt-2 capitalize">Read&nbsp;More</div>
+        </Link>
       </div>
     </div>
   );
