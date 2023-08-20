@@ -21,13 +21,13 @@ const Conferences = async () => {
 
   return (
     <section id="conferences" className="relative">
-      <h2 className="text-center text-light_brown">
+      <h2 className="text-center text-light_brown mb-4">
         Upcoming Events
       </h2>
       <div className="container grid grid-cols-1 lg:gap-8">
         {conferenceByYear.map((conferenceYear) => (
           <div className="mb-10">
-            <h2 className="text-center text-[1.5rem] md:text-[1.7rem] mb-0 font-bold text-light_blue">
+            <h2 className="text-center text-[1.5rem] md:text-[1.7rem] mb-3 font-bold text-light_blue">
               {conferenceYear.year} Conferences
             </h2>
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
