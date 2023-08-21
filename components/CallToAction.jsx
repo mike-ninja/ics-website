@@ -23,10 +23,14 @@ const CallToAction = () => {
               </p>
             </div>
             <a
-              href=""
+              href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAa__ZvvzOdURDA4VDFPTlgzVU01OUtBM0pCSkRBWFU0OS4u"
               className="border-b-[1px] border-metal_gray inline-block mt-4 transition-all hover:scale-105 text-2xl"
+              target="_blank"
+              rel="noreferrer"
             >
-              <span className="text-metal_gray text-lg lg:text-2xl">Become a Speaker</span>
+              <span className="text-metal_gray text-lg lg:text-2xl">
+                Become a Speaker
+              </span>
             </a>
           </div>
           <div>
@@ -40,10 +44,14 @@ const CallToAction = () => {
               </p>
             </div>
             <a
-              href=""
+              href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAa__ZvvzOdURU5XVUZNTk1KVzRCSUM3VVc0OTM0VVYyUC4u"
               className="border-b-[1px] border-metal_gray inline-block mt-4 transition-all hover:scale-105 text-2xl"
+              target="_blank"
+              rel="noreferrer"
             >
-              <span className="text-metal_gray text-lg lg:text-2xl">Become an Exhibitor</span>
+              <span className="text-metal_gray text-lg lg:text-2xl">
+                Become an Exhibitor
+              </span>
             </a>
           </div>
           <div>
@@ -57,10 +65,14 @@ const CallToAction = () => {
               </p>
             </div>
             <a
-              href=""
+              href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAa__ZvvzOdURDE3WU0yN0M2VzRCQzNTMEVYUkdKRlBTVi4u"
               className="border-b-[1px] border-metal_gray inline-block mt-4 transition-all hover:scale-105 text-2xl"
+              target="_blank"
+              rel="noreferrer"
             >
-              <span className="text-metal_gray text-lg lg:text-2xl">Become a Sponsor</span>
+              <span className="text-metal_gray text-lg lg:text-2xl">
+                Become a Sponsor
+              </span>
             </a>
           </div>
         </div>

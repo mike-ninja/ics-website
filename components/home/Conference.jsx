@@ -6,7 +6,7 @@ dayjs.extend(localizedFormat);
 
 const Conference = ({ conference }) => {
   return (
-    <div className="flex py-3 capitalize transition-all transform hover:scale-105">
+    <div className="flex py-3 pl-2 capitalize transition-all transform hover:scale-105">
       <div className="relative flex-none date_wrapper w-10 text-blood_red">
         <span className="text-[1.6rem] text-light_blue font-mono font-semibold tracking-tighter absolute transform rotate-[270deg] top-1/2 translate-y-[-50%] translate-x-[-0.8rem]">
           {dayjs(conference.date.start).format("DD")}

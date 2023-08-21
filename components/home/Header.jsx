@@ -10,7 +10,7 @@ const Header = () => {
         <div className="flex text-white justify-center">
           <Link
             className="btn btn_primary md:mr-2 lg:mr-5"
-            href=""
+            href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAa__ZvvzOdUOFJaVzVPRTUxRjhPT0dVV0lJTlNaRzg5Uy4u"
             target="_blank"
             rel="noreferrer"
           >
@@ -18,7 +18,7 @@ const Header = () => {
           </Link>
           <Link
             className="btn btn_variant md:ml-2 lg:ml-5"
-            href=""
+            href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAa__ZvvzOdURDA4VDFPTlgzVU01OUtBM0pCSkRBWFU0OS4u"
             target="_blank"
             rel="noreferrer"
           >
@@ -26,7 +26,10 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      <ToGetStarted text="To get started, check information below" goto="#conferences" />
+      <ToGetStarted
+        text="To get started, check information below"
+        goto="#conferences"
+      />
     </header>
   );
 };

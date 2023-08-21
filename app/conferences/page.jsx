@@ -2,6 +2,23 @@ import ConferenceCard from "@/components/ConferenceCard";
 import conferencesService from "@/services/conferences";
 import groupFunctionByYear from "@/utils/groupConferenceByYear";
 import SecondaryHeader from "@/components/SecondaryHeader";
+import FooterContact from "@/components/FooterContact";
+
+const ConferenceByMonth = (conferenceMonth) => {
+  const month = conferenceMonth.conferenceMonth;
+  return (
+    <div>
+      <h2 className="text-center italic font-thin capitalize text-2xl">
+        {month.month}
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {month.conferences.map((conference) => (
+          <ConferenceCard conference={conference} />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const page = async () => {
   const conferences = await conferencesService.getConferences();
@@ -9,7 +26,10 @@ const page = async () => {
 
   return (
     <>
-      <SecondaryHeader text="Check more information below" goto="#conferences" />
+      <SecondaryHeader
+        text="Check more information below"
+        goto="#conferences"
+      />
       <section id="conferences">
         <div className="container">
           <h2 className="text-center text-5xl text-dark_beige">
@@ -24,9 +44,9 @@ const page = async () => {
                 <h2 className="text-center text-[1.5rem] md:text-[1.7rem] mb-0 font-bold text-light_blue">
                   {conferenceYear.year} Conferences
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {conferenceYear.conferences.map((conference) => (
-                    <ConferenceCard conference={conference} />
+                <div className="grid grid-cols-1 gap-4">
+                  {conferenceYear.conferences.map((conferenceMonth) => (
+                    <ConferenceByMonth conferenceMonth={conferenceMonth} />
                   ))}
                 </div>
               </div>
@@ -34,6 +54,7 @@ const page = async () => {
           </div>
         </div>
       </section>
+      <FooterContact />
     </>
   );
 };

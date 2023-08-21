@@ -5,6 +5,7 @@ const localizedFormat = require("dayjs/plugin/localizedFormat");
 dayjs.extend(localizedFormat);
 
 const ConferenceCard = ({ conference }) => {
+  console.log(conference.tags);
   return (
     <Link
       href={`/conferences/${conference.slug}`}
@@ -25,7 +26,8 @@ const ConferenceCard = ({ conference }) => {
           <div className="flex-1">
             <span className="block mt-2">
               <h4 className="text-xs font-medium text-gray-600">
-                {dayjs(conference.date.start).format("MMMM DD")} - {dayjs(conference.date.end).format("DD, YYYY")}
+                {dayjs(conference.date.start).format("MMMM DD")} -{" "}
+                {dayjs(conference.date.end).format("DD, YYYY")}
               </h4>
             </span>
             <span className="block mt-2">
@@ -33,11 +35,12 @@ const ConferenceCard = ({ conference }) => {
                 {conference.title}
               </h3>
             </span>
-            <span className="block mt-2 space-x-4">
+            <span className="block mt-2 space-x-2 overflow-x-auto scrollbar-hide">
               {conference.tags.map((tag) => (
                 <span
                   key={tag.id}
-                  className="bg-green-300 text-green-800 px-2 py-1 text-xs rounded-lg"
+                  style={{ backgroundColor: tag.color !== "default" ? tag.color : "gray" }}
+                  className="px-2 py-1 text-xs rounded-lg text-white whitespace-nowrap"
                 >
                   #{tag.name}
                 </span>
