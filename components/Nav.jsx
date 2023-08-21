@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "@/public/assets/images/logo-ics.png";
+import Logo from "@/public/assets/images/logo-ics.svg";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
@@ -34,13 +34,13 @@ const Nav = () => {
 
   return (
     <nav className="bg-nav_texture w-full h-14 lg:h-16 flex justify-between items-center">
-      <Link href="/">
+      <Link href="/" className="h-full w-[60px] lg:w-[90px] relative ml-1 md:ml-4">
         <Image
           src={Logo}
-          alt="Aboriginal Flag"
-          width="150"
-          className="cursor-pointer rounded-md ml-4"
-          priority
+          alt="Indigenous Conference Services Logo"
+          fill
+          style={{objectFit: "contain"}}
+          className="cursor-pointer"
         />
       </Link>
       <div className="hidden sm:flex bg-transparent_brown h-full">
