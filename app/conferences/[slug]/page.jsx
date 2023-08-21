@@ -12,7 +12,7 @@ const PageHeader = ({ post }) => {
   return (
     <div>
       <div className="w-full h-[65vh] min-h-[500px] relative">
-        <div className="rounded-3xl text-dark_brown z-10 bg-off_white p-4 md:p-10 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-[90%] md:w-max">
+        <div className="rounded-md text-dark_brown z-10 bg-off_white p-4 md:p-10 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-[90%] md:w-max">
           <h1 className="text-lg md:text-3xl lg:text-5xl font-semibold tracking-wide text-center">
             {post.title}
           </h1>
