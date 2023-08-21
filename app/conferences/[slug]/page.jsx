@@ -33,7 +33,6 @@ const page = async ({ params }) => {
     params.slug,
   );
 
-  console.log(markdown);
   return (
     <>
       <PageHeader post={post} />

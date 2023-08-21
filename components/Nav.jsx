@@ -34,7 +34,7 @@ const Nav = () => {
 
   return (
     <nav className="bg-nav_texture w-full h-14 lg:h-16 flex justify-between items-center">
-      <Link href="/" className="h-full w-[60px] lg:w-[90px] relative ml-1 md:ml-4">
+      <Link href="/" className="h-full w-[60px] lg:w-[90px] relative ml-1 md:ml-4 transition-all hover:scale-110">
         <Image
           src={Logo}
           alt="Indigenous Conference Services Logo"

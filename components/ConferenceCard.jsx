@@ -5,7 +5,6 @@ const localizedFormat = require("dayjs/plugin/localizedFormat");
 dayjs.extend(localizedFormat);
 
 const ConferenceCard = ({ conference }) => {
-  console.log(conference.tags);
   return (
     <Link
       href={`/conferences/${conference.slug}`}
@@ -39,7 +38,11 @@ const ConferenceCard = ({ conference }) => {
               {conference.tags.map((tag) => (
                 <span
                   key={tag.id}
-                  style={{ backgroundColor: tag.color !== "default" ? tag.color : "gray" }}
+                  style={{
+                    backgroundColor: tag.color !== "default"
+                      ? tag.color
+                      : "gray",
+                  }}
                   className="px-2 py-1 text-xs rounded-lg text-white whitespace-nowrap"
                 >
                   #{tag.name}

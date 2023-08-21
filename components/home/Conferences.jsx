@@ -9,7 +9,7 @@ const ConferenceByMonth = (conferenceMonth) => {
     <div>
       <h2 className="text-center italic font-thin capitalize text-2xl">{month.month}</h2>
       {month.conferences.map((conference) => (
-        <Conference conference={conference} />
+        <Conference key={conference.title} conference={conference} />
       ))}
     </div>
   );
@@ -26,13 +26,13 @@ const Conferences = async () => {
       </h2>
       <div className="container grid grid-cols-1 lg:gap-8">
         {conferenceByYear.map((conferenceYear) => (
-          <div className="mb-10">
+          <div key={conferenceYear.year} className="mb-10">
             <h2 className="text-center text-[1.5rem] md:text-[1.7rem] mb-3 font-bold text-light_blue">
               {conferenceYear.year} Conferences
             </h2>
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
               {conferenceYear.conferences.map((conferenceMonth) => (
-                <ConferenceByMonth conferenceMonth={conferenceMonth} />
+                <ConferenceByMonth key={conferenceMonth.month} conferenceMonth={conferenceMonth} />
               ))}
             </div>
           </div>
