@@ -59,21 +59,28 @@ p {
 
 /* Markdown Style */
 .markdown h2 {
-  @apply mb-2;
+  @apply my-2 pt-4 md:my-4 text-center text-dark_brown tracking-tight font-normal text-2xl md:text-3xl lg:text-5xl;
 }
 
-table {
-  @apply min-w-full bg-white border rounded-lg overflow-hidden;
+.markdown h3 {
+  @apply text-dark_brown text-xl pt-4 font-normal;
 }
 
-thead {
-  @apply bg-gray-100;
+.markdown ul {
+  @apply mb-4 mt-2 text-metal_gray italic list-disc list-inside;
 }
 
-tr {
-  @apply py-2 px-4 text-left font-semibold;
-}
+/* .markdown li { */
+/*   @apply italic list-disc list-inside; */
+/* } */
 
+.loading-icon {
+  border: 4px solid transparent;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
 /* .black_btn { */
 /*   @apply rounded-full border border-black bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm font-inter flex items-center justify-center; */
 /* } */
