@@ -1,6 +1,5 @@
-import conferencesService from "@/services/conferences";
 import ConferenceCard from "./ConferenceCard";
-import speakers from "@/services/speakers";
+import conferencesService from "@/services/conferences";
 
 const ConferencesCards = async () => {
   const conferences = await conferencesService.getConferences();

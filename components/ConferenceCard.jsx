@@ -1,10 +1,9 @@
 import Link from "next/link";
 import dayjs from "dayjs";
 
-const localizedFormat = require("dayjs/plugin/localizedFormat");
-dayjs.extend(localizedFormat);
-
 const ConferenceCard = ({ conference }) => {
+  const localizedFormat = require("dayjs/plugin/localizedFormat");
+  dayjs.extend(localizedFormat);
   return (
     <Link
       href={`/conferences/${conference.slug}`}
@@ -25,6 +24,7 @@ const ConferenceCard = ({ conference }) => {
           <div className="flex-1">
             <span className="block mt-2">
               <h4 className="text-xs font-medium text-gray-600">
+                🗓️&nbsp;
                 {dayjs(conference.date.start).format("MMMM DD")} -{" "}
                 {dayjs(conference.date.end).format("DD, YYYY")}
               </h4>

@@ -2,8 +2,6 @@ import { HiSpeakerphone } from "react-icons/hi";
 import { PiMedalFill } from "react-icons/pi";
 import { RiPresentationFill } from "react-icons/ri";
 
-// TODO: Create buttons
-
 const CallToAction = () => {
   return (
     <section className="bg-light_beige">
