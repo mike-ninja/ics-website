@@ -19,7 +19,7 @@ const Conference = ({ conference }) => {
           <div className="text-light_brown font-semibold text-[1.2rem]">
             {conference.title}
           </div>
-          <div className="text-metal_gray">{conference.hotel}</div>
+          <div className="text-metal_gray">📍&nbsp;{conference.hotel}</div>
           <div className="text-metal_gray mt-2">Read&nbsp;More</div>
         </Link>
       </div>
