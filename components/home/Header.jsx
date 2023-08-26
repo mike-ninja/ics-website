@@ -4,7 +4,7 @@ import ToGetStarted from "../ToGetStarted";
 
 const Header = () => {
   return (
-    <header className="bg-home_header_bg relative bg-cover bg-center h-[60vh] min-h-[600px] lg:h-[80vh] flex flex-col justify-center items-center">
+    <header className="bg-home_header_bg relative bg-cover bg-top h-[60vh] min-h-[600px] lg:h-[80vh] flex flex-col justify-center items-center">
       <div className="w-fit p-4">
         <HeaderBox />
         <div className="flex text-white justify-center">

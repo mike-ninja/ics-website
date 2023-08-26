@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "nav_texture": "url('/assets/images/nav-texture.svg')",
-        "home_header_bg": "url('/assets/images/header-bg.png')",
+        "home_header_bg": "url('/assets/images/header.jpg')",
         "secondary_header_bg": "url('/assets/images/advantages-bg.jpg')",
         "conferences_header_bg": "url('/assets/images/advantages-bg.jpg')",
         "divider_dots": "url('/assets/images/divider-dots.svg')",
