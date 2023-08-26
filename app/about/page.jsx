@@ -4,9 +4,8 @@ import ImageFrame from "@/components/ImageFrame";
 import Highlights from "@/components/about/Highlights";
 import AboutImgOne from "@/public/assets/images/tom-liza.jpg";
 import AboutImgTwo from "@/public/assets/images/hand-painting.jpg";
-import AboutImgThree from "@/public/assets/images/charter.jpg";
+import AboutImgThree from "@/public/assets/images/elders-conference.jpg";
 import SecondaryHeader from "@/components/SecondaryHeader";
-import Image from "next/image";
 
 const page = () => {
   return (
