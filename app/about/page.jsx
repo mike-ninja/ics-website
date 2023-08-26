@@ -3,7 +3,7 @@ import GuideBox from "@/components/GuideBox";
 import ImageFrame from "@/components/ImageFrame";
 import Highlights from "@/components/about/Highlights";
 import AboutImgOne from "@/public/assets/images/tom-liza.jpg";
-import AboutImgTwo from "@/public/assets/images/hand-painting.jpg";
+import AboutImgTwo from "@/public/assets/images/indigenous-conference-exhibits.jpg";
 import AboutImgThree from "@/public/assets/images/elders-conference.jpg";
 import SecondaryHeader from "@/components/SecondaryHeader";
 
@@ -87,7 +87,7 @@ const page = () => {
             <ImageFrame
               img={AboutImgTwo}
               alt="Conferences Services Australia"
-              position="50% 5%"
+              position="50% 50%"
               bg="#dde4ea"
             />
             <div>
